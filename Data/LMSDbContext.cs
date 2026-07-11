@@ -9,6 +9,7 @@ public class LMSDbContext : DbContext
         : base(options)
     {
     }
+    // Add By Dai Ahmed
     // Users & Roles
     public DbSet<User> Users { get; set; }
 
@@ -26,8 +27,14 @@ public class LMSDbContext : DbContext
     // AI Assistant
     public DbSet<AIAssistantChat> AIAssistantChats { get; set; }
 
-  
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+    //Add By Mohamed Samy
+    public DbSet<LiveSession> LiveSessions { get; set; }
+    public DbSet<AttendanceLog> AttendanceLogs { get; set; }
+    public DbSet<Ticket> Tickets { get; set; }
+    public DbSet<TicketReply> TicketReplies { get; set; }
+    public DbSet<CommunityPost> CommunityPosts { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
 
