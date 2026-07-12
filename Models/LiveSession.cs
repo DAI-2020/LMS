@@ -10,6 +10,7 @@ public class LiveSession
     public DateTime ScheduledAt { get; set; } //(تاريخ ووقت المحاضرة)
     public int DurationMinutes { get; set; }       // مدة المحاضرة (مثلاً 180 لـ 3 ساعات)
     public LiveSessionStatus Status { get; set; }
+    public int WeekNumber { get; set; }          // رقم الأسبوع الذي تنتمي إليه المحاضرة (مثلاً 1، 2، 3، ... إلخ)
     public LiveSessionType Type { get; set; }          // Technical أو Non-Technical
     public DeliveryMode Mode { get; set; }          // Online أو Onsite
     public string? RecordingUrl { get; set; }      // لينك الفيديو المسجل للحصة بعد انتهائها

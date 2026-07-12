@@ -98,5 +98,13 @@ namespace LMS.API.Repositories.Implementations
                 await _context.SaveChangesAsync();
             }
         }
+
+        public IQueryable<AttendanceLog> GetStudentAttendanceWithSessionsQuery(int studentId)
+        {
+            // ????? ????????? ??? ???? Service ?? ???? ?????? ??? ???????
+            return _context.AttendanceLogs
+                .Include(al => al.LiveSession)
+                .Where(al => al.StudentId == studentId);
+        }
     }
 }

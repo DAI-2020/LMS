@@ -18,7 +18,8 @@ namespace LMS.API.Repositories.Implementations
         {
             return await _context.LiveSessions
                 .Include(ls => ls.Course)
-                .OrderByDescending(ls => ls.ScheduledAt)
+                .OrderBy(ls => ls.WeekNumber)
+                .ThenByDescending(ls => ls.ScheduledAt)
                 .ToListAsync();
         }
 
@@ -50,7 +51,10 @@ namespace LMS.API.Repositories.Implementations
             if (to.HasValue)
                 query = query.Where(ls => ls.ScheduledAt <= to.Value);
 
-            return await query.OrderByDescending(ls => ls.ScheduledAt).ToListAsync();
+            return await query
+                .OrderBy(ls => ls.WeekNumber)
+                .ThenByDescending(ls => ls.ScheduledAt)
+                .ToListAsync();
         }
 
         public async Task<IEnumerable<LiveSession>> GetUpcomingSessionsAsync()
@@ -58,7 +62,8 @@ namespace LMS.API.Repositories.Implementations
             return await _context.LiveSessions
                 .Include(ls => ls.Course)
                 .Where(ls => ls.Status == LiveSessionStatus.Upcoming || ls.Status == LiveSessionStatus.Live)
-                .OrderBy(ls => ls.ScheduledAt)
+                .OrderBy(ls => ls.WeekNumber)        
+                .ThenBy(ls => ls.ScheduledAt)
                 .ToListAsync();
         }
 

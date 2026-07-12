@@ -123,6 +123,7 @@ namespace LMS.API.Services.Implementations
                 CourseId = session.CourseId,
                 CourseName = session.Course?.Title ?? string.Empty,
                 Title = session.Title,
+                WeekNumber = session.WeekNumber,
                 ScheduledAt = session.ScheduledAt,
                 DurationMinutes = session.DurationMinutes,
                 Status = session.Status.ToString(),

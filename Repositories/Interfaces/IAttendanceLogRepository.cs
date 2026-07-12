@@ -11,6 +11,7 @@ namespace LMS.API.Repositories.Interfaces
         Task<IEnumerable<AttendanceLog>> GetByStudentIdAsync(int studentId);
         Task<AttendanceLog?> GetAttendanceLogAsync(int sessionId, int studentId);
         Task<StudentAttendanceSummaryDto?> GetStudentSummaryAsync(int studentId);
+        IQueryable<AttendanceLog> GetStudentAttendanceWithSessionsQuery(int studentId);
         Task<AttendanceLog> AddAsync(AttendanceLog log);
         Task UpdateAsync(AttendanceLog log);
         Task DeleteAsync(int id);

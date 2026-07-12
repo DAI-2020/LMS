@@ -3,16 +3,160 @@
   "WorkspaceRootPath": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\services\\implementations\\attendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:services\\implementations\\attendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\models\\faq.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:models\\faq.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\models\\livesession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:models\\livesession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\models\\notificationpreferences.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:models\\notificationpreferences.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\models\\userdevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:models\\userdevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\repositories\\implementations\\userdevicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:repositories\\implementations\\userdevicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\repositories\\implementations\\livesessionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:repositories\\implementations\\livesessionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\repositories\\implementations\\faqrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:repositories\\implementations\\faqrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\repositories\\implementations\\attendancelogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:repositories\\implementations\\attendancelogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\services\\implementations\\userdeviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:services\\implementations\\userdeviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\services\\implementations\\livesessionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:services\\implementations\\livesessionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\services\\interfaces\\iuserdeviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:services\\interfaces\\iuserdeviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\services\\interfaces\\ifaqservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:services\\interfaces\\ifaqservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\services\\interfaces\\iattendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:services\\interfaces\\iattendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\repositories\\interfaces\\iattendancelogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:repositories\\interfaces\\iattendancelogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\data\\lmsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:data\\lmsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\repositories\\interfaces\\iattendancerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:repositories\\interfaces\\iattendancerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\dtos\\attendance\\attendancefilterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:dtos\\attendance\\attendancefilterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\dtos\\attendance\\attendancesummaryresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:dtos\\attendance\\attendancesummaryresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\dtos\\attendance\\attendancelogdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:dtos\\attendance\\attendancelogdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\repositories\\interfaces\\ilivesessionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:repositories\\interfaces\\ilivesessionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\data\\configurations\\livesessionconfigurations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:data\\configurations\\livesessionconfigurations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\dtos\\livesession\\livesessionresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:dtos\\livesession\\livesessionresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\enums\\livesession\\livesessiontype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:enums\\livesession\\livesessiontype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\enums\\livesession\\livesessionstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:enums\\livesession\\livesessionstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\dtos\\attendance\\leavesessiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:dtos\\attendance\\leavesessiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\enums\\livesession\\deliverymode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:enums\\livesession\\deliverymode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\repositories\\interfaces\\iuserdevicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:repositories\\interfaces\\iuserdevicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\services\\implementations\\faqservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:services\\implementations\\faqservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\repositories\\interfaces\\ifaqrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:repositories\\interfaces\\ifaqrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\dtos\\faqs\\upsertfaqdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:dtos\\faqs\\upsertfaqdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\dtos\\faqs\\faqdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:dtos\\faqs\\faqdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\enums\\user\\gender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:enums\\user\\gender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\dtos\\userdevice\\disconnectdevicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:dtos\\userdevice\\disconnectdevicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\dtos\\userdevice\\userdeviceresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:dtos\\userdevice\\userdeviceresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\data\\configurations\\userdeviceconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:data\\configurations\\userdeviceconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\models\\ticketreply.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:models\\ticketreply.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\models\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:models\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\models\\livesession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:models\\livesession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\models\\communitypost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,18 +179,6 @@
       "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:enums\\ticket\\ticketcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\enums\\livesession\\livesessiontype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:enums\\livesession\\livesessiontype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\enums\\livesession\\livesessionstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:enums\\livesession\\livesessionstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\enums\\livesession\\deliverymode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:enums\\livesession\\deliverymode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\enums\\attendancelog\\participationlevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:enums\\attendancelog\\participationlevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -63,10 +195,6 @@
       "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:data\\configurations\\ticketconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\data\\configurations\\livesessionconfigurations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:data\\configurations\\livesessionconfigurations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\data\\configurations\\communitypostconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:data\\configurations\\communitypostconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -75,20 +203,8 @@
       "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:data\\configurations\\attendancelogconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\data\\lmsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:data\\lmsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\services\\implementations\\attendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:services\\implementations\\attendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\services\\implementations\\communityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:services\\implementations\\communityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\services\\implementations\\livesessionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:services\\implementations\\livesessionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\services\\interfaces\\ilivesessionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -107,10 +223,6 @@
       "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:services\\interfaces\\icommunityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\services\\interfaces\\iattendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:services\\interfaces\\iattendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\dtos\\ticket\\ticketresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:dtos\\ticket\\ticketresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -127,10 +239,6 @@
       "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:dtos\\livesession\\updatelivesessiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\dtos\\livesession\\livesessionresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:dtos\\livesession\\livesessionresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\dtos\\livesession\\createlivesessiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:dtos\\livesession\\createlivesessiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -143,28 +251,12 @@
       "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:dtos\\attendance\\studentattendancesummarydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\dtos\\attendance\\leavesessiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:dtos\\attendance\\leavesessiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\dtos\\attendance\\joinsessiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:dtos\\attendance\\joinsessiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\dtos\\attendance\\attendancelogdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:dtos\\attendance\\attendancelogdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\repositories\\implementations\\attendancelogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:repositories\\implementations\\attendancelogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\repositories\\implementations\\communitypostrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:repositories\\implementations\\communitypostrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\repositories\\implementations\\livesessionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:repositories\\implementations\\livesessionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\repositories\\implementations\\ticketreplyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -183,16 +275,8 @@
       "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:repositories\\interfaces\\iticketreplyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\repositories\\interfaces\\ilivesessionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:repositories\\interfaces\\ilivesessionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\repositories\\interfaces\\icommunitypostrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:repositories\\interfaces\\icommunitypostrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\repositories\\interfaces\\iattendancelogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:repositories\\interfaces\\iattendancelogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -202,11 +286,493 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NotificationPreferences.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Models\\NotificationPreferences.cs",
+              "RelativeDocumentMoniker": "Models\\NotificationPreferences.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Models\\NotificationPreferences.cs",
+              "RelativeToolTip": "Models\\NotificationPreferences.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T12:25:18.055Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FAQ.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Models\\FAQ.cs",
+              "RelativeDocumentMoniker": "Models\\FAQ.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Models\\FAQ.cs",
+              "RelativeToolTip": "Models\\FAQ.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T12:38:55.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AttendanceService.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Services\\Implementations\\AttendanceService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\AttendanceService.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Services\\Implementations\\AttendanceService.cs",
+              "RelativeToolTip": "Services\\Implementations\\AttendanceService.cs",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAswG8AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-11T14:34:51.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FaqRepository.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Repositories\\Implementations\\FaqRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementations\\FaqRepository.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Repositories\\Implementations\\FaqRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementations\\FaqRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAUwBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T12:52:05.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LiveSessionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Repositories\\Implementations\\LiveSessionRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementations\\LiveSessionRepository.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Repositories\\Implementations\\LiveSessionRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementations\\LiveSessionRepository.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAowEsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-11T14:27:20.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserDeviceRepository.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Repositories\\Implementations\\UserDeviceRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementations\\UserDeviceRepository.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Repositories\\Implementations\\UserDeviceRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementations\\UserDeviceRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABsAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T12:06:37.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "UserDevice.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Models\\UserDevice.cs",
+              "RelativeDocumentMoniker": "Models\\UserDevice.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Models\\UserDevice.cs",
+              "RelativeToolTip": "Models\\UserDevice.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T11:39:34.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T12:13:35.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LiveSession.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Models\\LiveSession.cs",
+              "RelativeDocumentMoniker": "Models\\LiveSession.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Models\\LiveSession.cs",
+              "RelativeToolTip": "Models\\LiveSession.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-11T13:35:52.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AttendanceLogRepository.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Repositories\\Implementations\\AttendanceLogRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementations\\AttendanceLogRepository.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Repositories\\Implementations\\AttendanceLogRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementations\\AttendanceLogRepository.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAADwv2cAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-11T14:17:52.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UserDeviceService.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Services\\Implementations\\UserDeviceService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\UserDeviceService.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Services\\Implementations\\UserDeviceService.cs",
+              "RelativeToolTip": "Services\\Implementations\\UserDeviceService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T12:09:45.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LiveSessionService.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Services\\Implementations\\LiveSessionService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\LiveSessionService.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Services\\Implementations\\LiveSessionService.cs",
+              "RelativeToolTip": "Services\\Implementations\\LiveSessionService.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAwwH0AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-11T14:33:29.757Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IUserDeviceService.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Services\\Interfaces\\IUserDeviceService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IUserDeviceService.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Services\\Interfaces\\IUserDeviceService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IUserDeviceService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T12:08:59.049Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IFaqService.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Services\\Interfaces\\IFaqService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IFaqService.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Services\\Interfaces\\IFaqService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IFaqService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T12:56:37.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IAttendanceService.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Services\\Interfaces\\IAttendanceService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IAttendanceService.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Services\\Interfaces\\IAttendanceService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IAttendanceService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-11T14:29:13.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IAttendanceLogRepository.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Repositories\\Interfaces\\IAttendanceLogRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\IAttendanceLogRepository.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Repositories\\Interfaces\\IAttendanceLogRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\IAttendanceLogRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-11T14:25:06.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "LMSDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Data\\LMSDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\LMSDbContext.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Data\\LMSDbContext.cs",
+              "RelativeToolTip": "Data\\LMSDbContext.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAA9wB8AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-11T14:04:11.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IAttendanceRepository.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Repositories\\Interfaces\\IAttendanceRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\IAttendanceRepository.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Repositories\\Interfaces\\IAttendanceRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\IAttendanceRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T13:32:34.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AttendanceFilterDto.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\Attendance\\AttendanceFilterDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Attendance\\AttendanceFilterDto.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\Attendance\\AttendanceFilterDto.cs",
+              "RelativeToolTip": "DTOs\\Attendance\\AttendanceFilterDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T13:30:10.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AttendanceSummaryResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\Attendance\\AttendanceSummaryResponseDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Attendance\\AttendanceSummaryResponseDto.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\Attendance\\AttendanceSummaryResponseDto.cs",
+              "RelativeToolTip": "DTOs\\Attendance\\AttendanceSummaryResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T13:28:47.764Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AttendanceLogDto.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\Attendance\\AttendanceLogDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Attendance\\AttendanceLogDto.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\Attendance\\AttendanceLogDto.cs",
+              "RelativeToolTip": "DTOs\\Attendance\\AttendanceLogDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-11T14:30:57.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ILiveSessionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Repositories\\Interfaces\\ILiveSessionRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\ILiveSessionRepository.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Repositories\\Interfaces\\ILiveSessionRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\ILiveSessionRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-11T14:25:42.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "LiveSessionConfigurations.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Data\\Configurations\\LiveSessionConfigurations.cs",
+              "RelativeDocumentMoniker": "Data\\Configurations\\LiveSessionConfigurations.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Data\\Configurations\\LiveSessionConfigurations.cs",
+              "RelativeToolTip": "Data\\Configurations\\LiveSessionConfigurations.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-11T14:06:20.175Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "LiveSessionResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\LiveSession\\LiveSessionResponseDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\LiveSession\\LiveSessionResponseDto.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\LiveSession\\LiveSessionResponseDto.cs",
+              "RelativeToolTip": "DTOs\\LiveSession\\LiveSessionResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-11T14:31:37.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "LiveSessionType.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Enums\\LiveSession\\LiveSessionType.cs",
+              "RelativeDocumentMoniker": "Enums\\LiveSession\\LiveSessionType.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Enums\\LiveSession\\LiveSessionType.cs",
+              "RelativeToolTip": "Enums\\LiveSession\\LiveSessionType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-11T14:37:56.855Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "LiveSessionStatus.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Enums\\LiveSession\\LiveSessionStatus.cs",
+              "RelativeDocumentMoniker": "Enums\\LiveSession\\LiveSessionStatus.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Enums\\LiveSession\\LiveSessionStatus.cs",
+              "RelativeToolTip": "Enums\\LiveSession\\LiveSessionStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-11T14:37:49.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "LeaveSessionDto.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\Attendance\\LeaveSessionDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Attendance\\LeaveSessionDto.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\Attendance\\LeaveSessionDto.cs",
+              "RelativeToolTip": "DTOs\\Attendance\\LeaveSessionDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-11T14:31:07.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "DeliveryMode.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Enums\\LiveSession\\DeliveryMode.cs",
+              "RelativeDocumentMoniker": "Enums\\LiveSession\\DeliveryMode.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Enums\\LiveSession\\DeliveryMode.cs",
+              "RelativeToolTip": "Enums\\LiveSession\\DeliveryMode.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-11T14:37:41.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "IUserDeviceRepository.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Repositories\\Interfaces\\IUserDeviceRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\IUserDeviceRepository.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Repositories\\Interfaces\\IUserDeviceRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\IUserDeviceRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T12:05:16.245Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "FaqService.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Services\\Implementations\\FaqService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\FaqService.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Services\\Implementations\\FaqService.cs",
+              "RelativeToolTip": "Services\\Implementations\\FaqService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T12:58:41.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "IFaqRepository.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Repositories\\Interfaces\\IFaqRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\IFaqRepository.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Repositories\\Interfaces\\IFaqRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\IFaqRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T12:50:29.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "UpsertFaqDto.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\FAQs\\UpsertFaqDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\FAQs\\UpsertFaqDto.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\FAQs\\UpsertFaqDto.cs",
+              "RelativeToolTip": "DTOs\\FAQs\\UpsertFaqDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T12:46:34.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "FaqDto.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\FAQs\\FaqDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\FAQs\\FaqDto.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\FAQs\\FaqDto.cs",
+              "RelativeToolTip": "DTOs\\FAQs\\FaqDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T12:45:48.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Gender.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Enums\\User\\Gender.cs",
+              "RelativeDocumentMoniker": "Enums\\User\\Gender.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Enums\\User\\Gender.cs",
+              "RelativeToolTip": "Enums\\User\\Gender.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T12:19:38.199Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "DisconnectDeviceDto.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\UserDevice\\DisconnectDeviceDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\UserDevice\\DisconnectDeviceDto.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\UserDevice\\DisconnectDeviceDto.cs",
+              "RelativeToolTip": "DTOs\\UserDevice\\DisconnectDeviceDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T12:03:35.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "UserDeviceResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\UserDevice\\UserDeviceResponseDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\UserDevice\\UserDeviceResponseDto.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\UserDevice\\UserDeviceResponseDto.cs",
+              "RelativeToolTip": "DTOs\\UserDevice\\UserDeviceResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAACfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T12:02:26.32Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "UserDeviceConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Data\\Configurations\\UserDeviceConfiguration.cs",
+              "RelativeDocumentMoniker": "Data\\Configurations\\UserDeviceConfiguration.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Data\\Configurations\\UserDeviceConfiguration.cs",
+              "RelativeToolTip": "Data\\Configurations\\UserDeviceConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T11:40:38.773Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
               "Title": "TicketStatus.cs",
               "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Enums\\Ticket\\TicketStatus.cs",
               "RelativeDocumentMoniker": "Enums\\Ticket\\TicketStatus.cs",
@@ -218,7 +784,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 42,
               "Title": "TicketPriority.cs",
               "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Enums\\Ticket\\TicketPriority.cs",
               "RelativeDocumentMoniker": "Enums\\Ticket\\TicketPriority.cs",
@@ -230,7 +796,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 43,
               "Title": "TicketCategory.cs",
               "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Enums\\Ticket\\TicketCategory.cs",
               "RelativeDocumentMoniker": "Enums\\Ticket\\TicketCategory.cs",
@@ -242,19 +808,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "LiveSessionType.cs",
-              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Enums\\LiveSession\\LiveSessionType.cs",
-              "RelativeDocumentMoniker": "Enums\\LiveSession\\LiveSessionType.cs",
-              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Enums\\LiveSession\\LiveSessionType.cs",
-              "RelativeToolTip": "Enums\\LiveSession\\LiveSessionType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:37:56.855Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 40,
               "Title": "AttendanceLog.cs",
               "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Models\\AttendanceLog.cs",
               "RelativeDocumentMoniker": "Models\\AttendanceLog.cs",
@@ -266,7 +820,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 39,
               "Title": "CommunityPost.cs",
               "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Models\\CommunityPost.cs",
               "RelativeDocumentMoniker": "Models\\CommunityPost.cs",
@@ -278,19 +832,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LiveSession.cs",
-              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Models\\LiveSession.cs",
-              "RelativeDocumentMoniker": "Models\\LiveSession.cs",
-              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Models\\LiveSession.cs",
-              "RelativeToolTip": "Models\\LiveSession.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T13:35:52.641Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 38,
               "Title": "Ticket.cs",
               "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Models\\Ticket.cs",
               "RelativeDocumentMoniker": "Models\\Ticket.cs",
@@ -302,7 +844,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 37,
               "Title": "TicketReply.cs",
               "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Models\\TicketReply.cs",
               "RelativeDocumentMoniker": "Models\\TicketReply.cs",
@@ -315,31 +857,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "LiveSessionStatus.cs",
-              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Enums\\LiveSession\\LiveSessionStatus.cs",
-              "RelativeDocumentMoniker": "Enums\\LiveSession\\LiveSessionStatus.cs",
-              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Enums\\LiveSession\\LiveSessionStatus.cs",
-              "RelativeToolTip": "Enums\\LiveSession\\LiveSessionStatus.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:37:49.586Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "DeliveryMode.cs",
-              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Enums\\LiveSession\\DeliveryMode.cs",
-              "RelativeDocumentMoniker": "Enums\\LiveSession\\DeliveryMode.cs",
-              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Enums\\LiveSession\\DeliveryMode.cs",
-              "RelativeToolTip": "Enums\\LiveSession\\DeliveryMode.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:37:41.426Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 44,
               "Title": "ParticipationLevel.cs",
               "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Enums\\AttendanceLog\\ParticipationLevel.cs",
               "RelativeDocumentMoniker": "Enums\\AttendanceLog\\ParticipationLevel.cs",
@@ -351,7 +869,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 45,
               "Title": "AttendanceStatus.cs",
               "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Enums\\AttendanceLog\\AttendanceStatus.cs",
               "RelativeDocumentMoniker": "Enums\\AttendanceLog\\AttendanceStatus.cs",
@@ -363,7 +881,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 47,
               "Title": "TicketConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Data\\Configurations\\TicketConfiguration.cs",
               "RelativeDocumentMoniker": "Data\\Configurations\\TicketConfiguration.cs",
@@ -375,7 +893,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 46,
               "Title": "TicketReplyConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Data\\Configurations\\TicketReplyConfiguration.cs",
               "RelativeDocumentMoniker": "Data\\Configurations\\TicketReplyConfiguration.cs",
@@ -387,19 +905,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "LiveSessionConfigurations.cs",
-              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Data\\Configurations\\LiveSessionConfigurations.cs",
-              "RelativeDocumentMoniker": "Data\\Configurations\\LiveSessionConfigurations.cs",
-              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Data\\Configurations\\LiveSessionConfigurations.cs",
-              "RelativeToolTip": "Data\\Configurations\\LiveSessionConfigurations.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:06:20.175Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 48,
               "Title": "CommunityPostConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Data\\Configurations\\CommunityPostConfiguration.cs",
               "RelativeDocumentMoniker": "Data\\Configurations\\CommunityPostConfiguration.cs",
@@ -411,7 +917,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 49,
               "Title": "AttendanceLogConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Data\\Configurations\\AttendanceLogConfiguration.cs",
               "RelativeDocumentMoniker": "Data\\Configurations\\AttendanceLogConfiguration.cs",
@@ -423,31 +929,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "LMSDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Data\\LMSDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\LMSDbContext.cs",
-              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Data\\LMSDbContext.cs",
-              "RelativeToolTip": "Data\\LMSDbContext.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAswAMAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:04:11.122Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "AttendanceService.cs",
-              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Services\\Implementations\\AttendanceService.cs",
-              "RelativeDocumentMoniker": "Services\\Implementations\\AttendanceService.cs",
-              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Services\\Implementations\\AttendanceService.cs",
-              "RelativeToolTip": "Services\\Implementations\\AttendanceService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:34:51.746Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 50,
               "Title": "CommunityService.cs",
               "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Services\\Implementations\\CommunityService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\CommunityService.cs",
@@ -459,19 +941,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "LiveSessionService.cs",
-              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Services\\Implementations\\LiveSessionService.cs",
-              "RelativeDocumentMoniker": "Services\\Implementations\\LiveSessionService.cs",
-              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Services\\Implementations\\LiveSessionService.cs",
-              "RelativeToolTip": "Services\\Implementations\\LiveSessionService.cs",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAwwHoAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:33:29.757Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 52,
               "Title": "TicketService.cs",
               "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Services\\Implementations\\TicketService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\TicketService.cs",
@@ -483,7 +953,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 51,
               "Title": "ILiveSessionService.cs",
               "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Services\\Interfaces\\ILiveSessionService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\ILiveSessionService.cs",
@@ -495,7 +965,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 54,
               "Title": "ICommunityService.cs",
               "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Services\\Interfaces\\ICommunityService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\ICommunityService.cs",
@@ -507,7 +977,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 53,
               "Title": "ITicketService.cs",
               "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Services\\Interfaces\\ITicketService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\ITicketService.cs",
@@ -519,7 +989,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 55,
               "Title": "TicketResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\Ticket\\TicketResponseDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Ticket\\TicketResponseDto.cs",
@@ -531,7 +1001,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 56,
               "Title": "TicketReplyDto.cs",
               "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\Ticket\\TicketReplyDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Ticket\\TicketReplyDto.cs",
@@ -543,19 +1013,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "IAttendanceService.cs",
-              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Services\\Interfaces\\IAttendanceService.cs",
-              "RelativeDocumentMoniker": "Services\\Interfaces\\IAttendanceService.cs",
-              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Services\\Interfaces\\IAttendanceService.cs",
-              "RelativeToolTip": "Services\\Interfaces\\IAttendanceService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:29:13.608Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 57,
               "Title": "CreateTicketDto.cs",
               "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\Ticket\\CreateTicketDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Ticket\\CreateTicketDto.cs",
@@ -567,7 +1025,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 58,
               "Title": "UpdateLiveSessionDto.cs",
               "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\LiveSession\\UpdateLiveSessionDto.cs",
               "RelativeDocumentMoniker": "DTOs\\LiveSession\\UpdateLiveSessionDto.cs",
@@ -579,19 +1037,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "LiveSessionResponseDto.cs",
-              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\LiveSession\\LiveSessionResponseDto.cs",
-              "RelativeDocumentMoniker": "DTOs\\LiveSession\\LiveSessionResponseDto.cs",
-              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\LiveSession\\LiveSessionResponseDto.cs",
-              "RelativeToolTip": "DTOs\\LiveSession\\LiveSessionResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:31:37.911Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 59,
               "Title": "CreateLiveSessionDto.cs",
               "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\LiveSession\\CreateLiveSessionDto.cs",
               "RelativeDocumentMoniker": "DTOs\\LiveSession\\CreateLiveSessionDto.cs",
@@ -603,7 +1049,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 60,
               "Title": "CommunityPostDto.cs",
               "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\Community\\CommunityPostDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Community\\CommunityPostDto.cs",
@@ -615,7 +1061,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 61,
               "Title": "StudentAttendanceSummaryDto.cs",
               "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\Attendance\\StudentAttendanceSummaryDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Attendance\\StudentAttendanceSummaryDto.cs",
@@ -627,19 +1073,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "LeaveSessionDto.cs",
-              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\Attendance\\LeaveSessionDto.cs",
-              "RelativeDocumentMoniker": "DTOs\\Attendance\\LeaveSessionDto.cs",
-              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\Attendance\\LeaveSessionDto.cs",
-              "RelativeToolTip": "DTOs\\Attendance\\LeaveSessionDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:31:07.707Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 62,
               "Title": "JoinSessionDto.cs",
               "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\Attendance\\JoinSessionDto.cs",
               "RelativeDocumentMoniker": "DTOs\\Attendance\\JoinSessionDto.cs",
@@ -651,19 +1085,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "AttendanceLogDto.cs",
-              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\Attendance\\AttendanceLogDto.cs",
-              "RelativeDocumentMoniker": "DTOs\\Attendance\\AttendanceLogDto.cs",
-              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\Attendance\\AttendanceLogDto.cs",
-              "RelativeToolTip": "DTOs\\Attendance\\AttendanceLogDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:30:57.328Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 63,
               "Title": "CommunityPostRepository.cs",
               "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Repositories\\Implementations\\CommunityPostRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\Implementations\\CommunityPostRepository.cs",
@@ -675,31 +1097,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "AttendanceLogRepository.cs",
-              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Repositories\\Implementations\\AttendanceLogRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\Implementations\\AttendanceLogRepository.cs",
-              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Repositories\\Implementations\\AttendanceLogRepository.cs",
-              "RelativeToolTip": "Repositories\\Implementations\\AttendanceLogRepository.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:17:52.976Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "LiveSessionRepository.cs",
-              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Repositories\\Implementations\\LiveSessionRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\Implementations\\LiveSessionRepository.cs",
-              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Repositories\\Implementations\\LiveSessionRepository.cs",
-              "RelativeToolTip": "Repositories\\Implementations\\LiveSessionRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:27:20.374Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 64,
               "Title": "TicketReplyRepository.cs",
               "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Repositories\\Implementations\\TicketReplyRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\Implementations\\TicketReplyRepository.cs",
@@ -711,7 +1109,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 65,
               "Title": "TicketRepository.cs",
               "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Repositories\\Implementations\\TicketRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\Implementations\\TicketRepository.cs",
@@ -723,7 +1121,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 66,
               "Title": "ITicketRepository.cs",
               "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Repositories\\Interfaces\\ITicketRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\Interfaces\\ITicketRepository.cs",
@@ -735,7 +1133,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 67,
               "Title": "ITicketReplyRepository.cs",
               "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Repositories\\Interfaces\\ITicketReplyRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\Interfaces\\ITicketReplyRepository.cs",
@@ -747,19 +1145,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "ILiveSessionRepository.cs",
-              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Repositories\\Interfaces\\ILiveSessionRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\Interfaces\\ILiveSessionRepository.cs",
-              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Repositories\\Interfaces\\ILiveSessionRepository.cs",
-              "RelativeToolTip": "Repositories\\Interfaces\\ILiveSessionRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:25:42.213Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 68,
               "Title": "ICommunityPostRepository.cs",
               "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Repositories\\Interfaces\\ICommunityPostRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\Interfaces\\ICommunityPostRepository.cs",
@@ -768,18 +1154,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-11T14:25:26.152Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "IAttendanceLogRepository.cs",
-              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Repositories\\Interfaces\\IAttendanceLogRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\Interfaces\\IAttendanceLogRepository.cs",
-              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Repositories\\Interfaces\\IAttendanceLogRepository.cs",
-              "RelativeToolTip": "Repositories\\Interfaces\\IAttendanceLogRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:25:06.389Z"
             }
           ]
         }

@@ -11,6 +11,7 @@ namespace LMS.API.DTOs.LiveSession
         public string Status { get; set; }
         public string Type { get; set; }
         public string Mode { get; set; }
+        public int WeekNumber { get; set; }
         public string? RecordingUrl { get; set; }
         public int AttendanceCount { get; set; }
     }

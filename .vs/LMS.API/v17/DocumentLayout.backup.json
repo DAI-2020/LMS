@@ -214,8 +214,7 @@
               "RelativeToolTip": "Enums\\Ticket\\TicketStatus.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:38:21.926Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:38:21.926Z"
             },
             {
               "$type": "Document",
@@ -227,8 +226,7 @@
               "RelativeToolTip": "Enums\\Ticket\\TicketPriority.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:38:15.537Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:38:15.537Z"
             },
             {
               "$type": "Document",
@@ -240,8 +238,7 @@
               "RelativeToolTip": "Enums\\Ticket\\TicketCategory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:38:06.829Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:38:06.829Z"
             },
             {
               "$type": "Document",
@@ -253,8 +250,7 @@
               "RelativeToolTip": "Enums\\LiveSession\\LiveSessionType.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:37:56.855Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:37:56.855Z"
             },
             {
               "$type": "Document",
@@ -266,8 +262,7 @@
               "RelativeToolTip": "Models\\AttendanceLog.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T13:34:08.312Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T13:34:08.312Z"
             },
             {
               "$type": "Document",
@@ -279,8 +274,7 @@
               "RelativeToolTip": "Models\\CommunityPost.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T13:35:17.927Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T13:35:17.927Z"
             },
             {
               "$type": "Document",
@@ -292,8 +286,7 @@
               "RelativeToolTip": "Models\\LiveSession.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T13:35:52.641Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T13:35:52.641Z"
             },
             {
               "$type": "Document",
@@ -305,8 +298,7 @@
               "RelativeToolTip": "Models\\Ticket.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T13:36:44.101Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T13:36:44.101Z"
             },
             {
               "$type": "Document",
@@ -331,8 +323,7 @@
               "RelativeToolTip": "Enums\\LiveSession\\LiveSessionStatus.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:37:49.586Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:37:49.586Z"
             },
             {
               "$type": "Document",
@@ -344,8 +335,7 @@
               "RelativeToolTip": "Enums\\LiveSession\\DeliveryMode.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:37:41.426Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:37:41.426Z"
             },
             {
               "$type": "Document",
@@ -357,8 +347,7 @@
               "RelativeToolTip": "Enums\\AttendanceLog\\ParticipationLevel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:37:26.851Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:37:26.851Z"
             },
             {
               "$type": "Document",
@@ -370,8 +359,7 @@
               "RelativeToolTip": "Enums\\AttendanceLog\\AttendanceStatus.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:37:19.972Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:37:19.972Z"
             },
             {
               "$type": "Document",
@@ -383,8 +371,7 @@
               "RelativeToolTip": "Data\\Configurations\\TicketConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:07:02.201Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:07:02.201Z"
             },
             {
               "$type": "Document",
@@ -396,8 +383,7 @@
               "RelativeToolTip": "Data\\Configurations\\TicketReplyConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:07:18.146Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:07:18.146Z"
             },
             {
               "$type": "Document",
@@ -409,8 +395,7 @@
               "RelativeToolTip": "Data\\Configurations\\LiveSessionConfigurations.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:06:20.175Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:06:20.175Z"
             },
             {
               "$type": "Document",
@@ -422,8 +407,7 @@
               "RelativeToolTip": "Data\\Configurations\\CommunityPostConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:06:10.449Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:06:10.449Z"
             },
             {
               "$type": "Document",
@@ -435,8 +419,7 @@
               "RelativeToolTip": "Data\\Configurations\\AttendanceLogConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:05:53.989Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:05:53.989Z"
             },
             {
               "$type": "Document",
@@ -448,8 +431,7 @@
               "RelativeToolTip": "Data\\LMSDbContext.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAswAMAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:04:11.122Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:04:11.122Z"
             },
             {
               "$type": "Document",
@@ -461,8 +443,7 @@
               "RelativeToolTip": "Services\\Implementations\\AttendanceService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:34:51.746Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:34:51.746Z"
             },
             {
               "$type": "Document",
@@ -474,8 +455,7 @@
               "RelativeToolTip": "Services\\Implementations\\CommunityService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:34:31.648Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:34:31.648Z"
             },
             {
               "$type": "Document",
@@ -487,8 +467,7 @@
               "RelativeToolTip": "Services\\Implementations\\LiveSessionService.cs",
               "ViewState": "AgIAAGMAAAAAAAAAAAAwwHoAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:33:29.757Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:33:29.757Z"
             },
             {
               "$type": "Document",
@@ -500,8 +479,7 @@
               "RelativeToolTip": "Services\\Implementations\\TicketService.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAgwAYAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:32:38.769Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:32:38.769Z"
             },
             {
               "$type": "Document",
@@ -513,8 +491,7 @@
               "RelativeToolTip": "Services\\Interfaces\\ILiveSessionService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:32:21.571Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:32:21.571Z"
             },
             {
               "$type": "Document",
@@ -526,8 +503,7 @@
               "RelativeToolTip": "Services\\Interfaces\\ICommunityService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:32:11.595Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:32:11.595Z"
             },
             {
               "$type": "Document",
@@ -539,8 +515,7 @@
               "RelativeToolTip": "Services\\Interfaces\\ITicketService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:28:34.835Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:28:34.835Z"
             },
             {
               "$type": "Document",
@@ -552,8 +527,7 @@
               "RelativeToolTip": "DTOs\\Ticket\\TicketResponseDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:31:56.26Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:31:56.26Z"
             },
             {
               "$type": "Document",
@@ -565,8 +539,7 @@
               "RelativeToolTip": "DTOs\\Ticket\\TicketReplyDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:31:51.811Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:31:51.811Z"
             },
             {
               "$type": "Document",
@@ -578,8 +551,7 @@
               "RelativeToolTip": "Services\\Interfaces\\IAttendanceService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:29:13.608Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:29:13.608Z"
             },
             {
               "$type": "Document",
@@ -591,8 +563,7 @@
               "RelativeToolTip": "DTOs\\Ticket\\CreateTicketDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:31:48.252Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:31:48.252Z"
             },
             {
               "$type": "Document",
@@ -604,8 +575,7 @@
               "RelativeToolTip": "DTOs\\LiveSession\\UpdateLiveSessionDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:31:41.888Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:31:41.888Z"
             },
             {
               "$type": "Document",
@@ -617,8 +587,7 @@
               "RelativeToolTip": "DTOs\\LiveSession\\LiveSessionResponseDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:31:37.911Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:31:37.911Z"
             },
             {
               "$type": "Document",
@@ -630,8 +599,7 @@
               "RelativeToolTip": "DTOs\\LiveSession\\CreateLiveSessionDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:31:33.812Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:31:33.812Z"
             },
             {
               "$type": "Document",
@@ -643,8 +611,7 @@
               "RelativeToolTip": "DTOs\\Community\\CommunityPostDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:31:25.789Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:31:25.789Z"
             },
             {
               "$type": "Document",
@@ -656,8 +623,7 @@
               "RelativeToolTip": "DTOs\\Attendance\\StudentAttendanceSummaryDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:31:18.96Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:31:18.96Z"
             },
             {
               "$type": "Document",
@@ -669,8 +635,7 @@
               "RelativeToolTip": "DTOs\\Attendance\\LeaveSessionDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:31:07.707Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:31:07.707Z"
             },
             {
               "$type": "Document",
@@ -682,8 +647,7 @@
               "RelativeToolTip": "DTOs\\Attendance\\JoinSessionDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:31:03.375Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:31:03.375Z"
             },
             {
               "$type": "Document",
@@ -695,8 +659,7 @@
               "RelativeToolTip": "DTOs\\Attendance\\AttendanceLogDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:30:57.328Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:30:57.328Z"
             },
             {
               "$type": "Document",
@@ -708,8 +671,7 @@
               "RelativeToolTip": "Repositories\\Implementations\\CommunityPostRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:20:03.652Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:20:03.652Z"
             },
             {
               "$type": "Document",
@@ -721,8 +683,7 @@
               "RelativeToolTip": "Repositories\\Implementations\\AttendanceLogRepository.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAAwAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:17:52.976Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:17:52.976Z"
             },
             {
               "$type": "Document",
@@ -734,8 +695,7 @@
               "RelativeToolTip": "Repositories\\Implementations\\LiveSessionRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:27:20.374Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:27:20.374Z"
             },
             {
               "$type": "Document",
@@ -747,8 +707,7 @@
               "RelativeToolTip": "Repositories\\Implementations\\TicketReplyRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:26:52.14Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:26:52.14Z"
             },
             {
               "$type": "Document",
@@ -760,8 +719,7 @@
               "RelativeToolTip": "Repositories\\Implementations\\TicketRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:26:24.867Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:26:24.867Z"
             },
             {
               "$type": "Document",
@@ -773,8 +731,7 @@
               "RelativeToolTip": "Repositories\\Interfaces\\ITicketRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:26:01.101Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:26:01.101Z"
             },
             {
               "$type": "Document",
@@ -786,8 +743,7 @@
               "RelativeToolTip": "Repositories\\Interfaces\\ITicketReplyRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:25:53.234Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:25:53.234Z"
             },
             {
               "$type": "Document",
@@ -799,8 +755,7 @@
               "RelativeToolTip": "Repositories\\Interfaces\\ILiveSessionRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:25:42.213Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:25:42.213Z"
             },
             {
               "$type": "Document",
@@ -812,8 +767,7 @@
               "RelativeToolTip": "Repositories\\Interfaces\\ICommunityPostRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:25:26.152Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:25:26.152Z"
             },
             {
               "$type": "Document",
@@ -825,8 +779,7 @@
               "RelativeToolTip": "Repositories\\Interfaces\\IAttendanceLogRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:25:06.389Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:25:06.389Z"
             }
           ]
         }

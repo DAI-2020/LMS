@@ -14,6 +14,9 @@ namespace LMS.API.Data.Configurations
                 .IsRequired()
                 .HasMaxLength(200);
 
+            builder.Property(s => s.WeekNumber)
+                .IsRequired();
+
             // 1. العلاقة بين LiveSession و Course
             builder.HasOne(ls => ls.Course)
                 .WithMany(c => c.LiveSessions)

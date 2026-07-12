@@ -33,6 +33,10 @@ public class LMSDbContext : DbContext
     public DbSet<Ticket> Tickets { get; set; }
     public DbSet<TicketReply> TicketReplies { get; set; }
     public DbSet<CommunityPost> CommunityPosts { get; set; }
+    // محتاجين كونفجريشن
+    public DbSet<FAQ> FAQs { get; set; }
+    public DbSet<UserDevice> UserDevices { get; set; }
+    public DbSet<NotificationPreferences> Notifications { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
