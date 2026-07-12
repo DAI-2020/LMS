@@ -21,5 +21,5 @@ public class CourseTask
     public ICollection<TaskSubmission> Submissions { get; set; } = new List<TaskSubmission>();
     
     //external relationship
-    public virtual LiveSession LiveSessions { get; set; }
+    public virtual LiveSession? LiveSession { get; set; }
 }

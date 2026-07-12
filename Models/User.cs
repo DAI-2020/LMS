@@ -1,5 +1,4 @@
 ﻿using LMS.API.Enums.User;
-using System.Net.Sockets;
 
 namespace LMS.API.Models;
 
@@ -17,8 +16,10 @@ public class User
 
     public Gender Gender { get; set; }
     public DateOnly? DateOfBirth { get; set; } = null;
-    
+
     public string? Address { get; set; }
+
+    public string? PhoneNumber { get; set; }
 
     //  Internal Relations
     public ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
@@ -28,14 +29,14 @@ public class User
     public ICollection<TaskSubmission> TaskSubmissions { get; set; } = new List<TaskSubmission>();
 
     public ICollection<AIAssistantChat> Chats { get; set; } = new List<AIAssistantChat>();
-    
+
     //External Relations
-    public ICollection<AttendanceLog> AttendanceLogs { get; set; } = new List<AttendanceLog>(); // 1->many relationship
-    public ICollection<Ticket> Tickets { get; set; } = new List<Ticket>(); // 1->many relationship
+    public ICollection<AttendanceLog> AttendanceLogs { get; set; } = new List<AttendanceLog>();
+    public ICollection<Ticket> Tickets { get; set; } = new List<Ticket>();
 
-    public ICollection<CommunityPost> CommunityPosts { get; set; } = new List<CommunityPost>(); // 1->many relationship
+    public ICollection<CommunityPost> CommunityPosts { get; set; } = new List<CommunityPost>();
 
-    //add by mohamed samy
-    public ICollection<UserDevice> UserDevices { get; set; } = new List<UserDevice>(); // 1->many relationship
+    public ICollection<UserDevice> UserDevices { get; set; } = new List<UserDevice>();
 
+    public ICollection<NotificationPreferences> NotificationPreferences { get; set; } = new List<NotificationPreferences>();
 }
