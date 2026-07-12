@@ -1,4 +1,5 @@
-﻿using LMS.API.Models;
+﻿using LMS.API.Enums.User;
+using LMS.API.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -23,5 +24,20 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
 
         builder.Property(x => x.PasswordHash)
                .IsRequired();
+
+        builder.Property(x => x.Gender)
+               .HasConversion<string>()
+               .IsRequired();
+
+        builder.Property(x => x.DateOfBirth)
+               .IsRequired(false);
+
+        builder.Property(x => x.Address)
+               .HasMaxLength(250)
+               .IsRequired(false);
+
+        builder.Property(x => x.PhoneNumber)
+               .HasMaxLength(20)
+               .IsRequired(false);
     }
 }

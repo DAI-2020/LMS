@@ -18,9 +18,9 @@ public class CourseTaskConfiguration : IEntityTypeConfiguration<Models.CourseTas
                .HasForeignKey(x => x.CourseId);
 
         builder.HasOne(t => t.LiveSession)
-               .WithMany() // أو WithMany(s => s.Tasks) لو حابب تضيفها في جدولك
+               .WithMany()
                .HasForeignKey(t => t.SessionId)
-               .OnDelete(DeleteBehavior.SetNull); // SetNull عشان لو المحاضرة اتمسحت الواجب ميتسحش من الكورس
+               .OnDelete(DeleteBehavior.SetNull);
         
         builder.Property(x => x.Description)
        .HasMaxLength(1000);

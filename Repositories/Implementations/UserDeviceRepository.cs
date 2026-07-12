@@ -2,7 +2,6 @@
 using LMS.API.Models;
 using LMS.API.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using System;
 
 namespace LMS.API.Repositories.Implementations
 {
@@ -42,6 +41,27 @@ namespace LMS.API.Repositories.Implementations
         {
             return await _context.UserDevices
                 .FirstOrDefaultAsync(d => d.RefreshTokenHash == tokenHash);
+        }
+
+        public async Task DisconnectDeviceAsync(UserDevice device)
+        {
+            device.RefreshTokenHash = string.Empty;
+            _context.UserDevices.Update(device);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DisconnectAllDevicesAsync(int userId)
+        {
+            var devices = await _context.UserDevices
+                .Where(d => d.UserId == userId)
+                .ToListAsync();
+
+            foreach (var device in devices)
+            {
+                device.RefreshTokenHash = string.Empty;
+            }
+
+            await _context.SaveChangesAsync();
         }
 
         public async Task SaveChangesAsync()

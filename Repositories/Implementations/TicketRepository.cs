@@ -4,7 +4,7 @@ using LMS.API.Enums.Ticket;
 using LMS.API.Models;
 using LMS.API.Repositories.Interfaces;
 
-namespace LMS_Mega_Project.Repositories.Implementations
+namespace LMS.API.Repositories.Implementations
 {
     public class TicketRepository : ITicketRepository
     {

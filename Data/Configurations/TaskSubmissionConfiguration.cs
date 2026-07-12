@@ -10,7 +10,7 @@ public class TaskSubmissionConfiguration : IEntityTypeConfiguration<TaskSubmissi
     {
         builder.HasKey(x => x.Id);
 
-        builder.HasOne(x => x.Task)
+        builder.HasOne(x => x.CourseTask)
                .WithMany(x => x.Submissions)
                .HasForeignKey(x => x.TaskId);
 

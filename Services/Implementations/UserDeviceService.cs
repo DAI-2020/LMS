@@ -17,14 +17,13 @@ namespace LMS.API.Services.Implementations
         {
             var devices = await _deviceRepository.GetDevicesByUserIdAsync(userId);
 
-            // عمل Mapping مانيوال للـ DTO ومعادلة تحديد الجهاز الحالي النشط
             return devices.Select(d => new UserDeviceResponseDto
             {
                 Id = d.Id,
                 DeviceName = d.DeviceName,
                 ClientInfo = d.ClientInfo,
                 LastUsed = d.LastUsed,
-                IsCurrentDevice = d.RefreshTokenHash == currentTokenHash // لو الـ Token هو اللي داخل بيه حالياً، يعلم عليه True
+                IsCurrentDevice = d.RefreshTokenHash == currentTokenHash
             });
         }
 
@@ -32,14 +31,12 @@ namespace LMS.API.Services.Implementations
         {
             var device = await _deviceRepository.GetByIdAsync(deviceId);
 
-            // تأكيد أمان: نتأكد إن الجهاز موجود وبيخص المستخدم نفسه اللي باعت الطلب من الـ API
             if (device == null || device.UserId != userId)
             {
                 return false;
             }
 
-            _deviceRepository.Delete(device);
-            await _deviceRepository.SaveChangesAsync();
+            await _deviceRepository.DisconnectDeviceAsync(device);
             return true;
         }
     }

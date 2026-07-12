@@ -18,5 +18,5 @@ public class Material
     public Course Course { get; set; }
     
     //external relationships
-    public virtual LiveSession LiveSessions { get; set; }
+    public virtual LiveSession? LiveSession { get; set; }
 }
