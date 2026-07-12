@@ -20,4 +20,5 @@ public class Course
     //External relations 
     
     public ICollection<LiveSession> LiveSessions { get; set; } = new List<LiveSession>(); //1->many relationship
+    public ICollection<Topic> Topics { get; set; }= new List<Topic>();
 }

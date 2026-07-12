@@ -15,6 +15,12 @@ namespace LMS.API.Repositories.Interfaces
 
         IAIChatRepository AIChats { get; }
 
+        IGraduationProjectRepository GraduationProjects { get; }
+
+        ITopicRepository Topics { get; }
+
+        IQuizRepository Quizzes { get; }
+
         Task<int> SaveChangesAsync();
     }
 }

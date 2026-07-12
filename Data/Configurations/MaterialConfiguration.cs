@@ -17,8 +17,8 @@ public class MaterialConfiguration : IEntityTypeConfiguration<Material>
                .WithMany(x => x.Materials)
                .HasForeignKey(x => x.CourseId);
 
-        builder.HasOne(m => m.LiveSession)
-           .WithMany()
+        builder.HasOne(m => m.LiveSessions)
+           .WithMany(s => s.Materials)
            .HasForeignKey(m => m.SessionId)
            .OnDelete(DeleteBehavior.SetNull);
 

@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "Y2pAXRhL4LvTOBQnHHkDEJrMBij2KW2brAWhNRLVqM0=",
+  "Source": "LMS.API",
+  "BasePath": "_content/LMS.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "LMS.API\\wwwroot",
+      "Source": "LMS.API",
+      "ContentRoot": "D:\\MegaProject\\LMS.API\\wwwroot\\",
+      "BasePath": "_content/LMS.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}

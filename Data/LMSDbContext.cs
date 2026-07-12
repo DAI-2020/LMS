@@ -24,6 +24,12 @@ public class LMSDbContext : DbContext
     public DbSet<Models.CourseTask> CourseTasks { get; set; }
 
     public DbSet<TaskSubmission> TaskSubmissions { get; set; }
+    
+    public DbSet<GraduationProjectSubmission> GraduationProjectSubmissions { get; set; } 
+   
+    public DbSet<Topic> Topics { get; set; }
+   
+    public DbSet<Quiz> Quizzes { get; set; }
     // AI Assistant
     public DbSet<AIAssistantChat> AIAssistantChats { get; set; }
 
@@ -38,7 +44,6 @@ public class LMSDbContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
 
-        modelBuilder.ApplyConfigurationsFromAssembly(
-            typeof(LMSDbContext).Assembly);
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(LMSDbContext).Assembly);
     }
 }

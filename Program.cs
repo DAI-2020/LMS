@@ -1,4 +1,9 @@
 
+using LMS.API.Repositories.Implementations;
+using LMS.API.Repositories.Interfaces;
+using LMS.API.Services.Interfaces;
+using LMS.API.Services.Implementations;
+
 namespace LMS.API
 {
     public class Program
@@ -17,11 +22,22 @@ namespace LMS.API
             builder.Services.AddScoped<ICourseRepository, CourseRepository>();
             builder.Services.AddScoped<IMaterialRepository, MaterialRepository>();
 
-            builder.Services.AddScoped<ICourseTaskRepository, TaskRepository>();
+            builder.Services.AddScoped<ICourseTaskRepository, CourseTaskRepository>();
 
-            builder.Services.AddScoped<ISubmissionRepository, SubmissionRepository>();
+            builder.Services.AddScoped<ITaskSubmissionRepository, TaskSubmissionRepository>();
 
             builder.Services.AddScoped<IAIChatRepository, AIChatRepository>();
+            builder.Services.AddScoped<IGraduationProjectRepository, GraduationProjectRepository>();
+
+            builder.Services.AddScoped<ITopicRepository, TopicRepository>();
+
+            builder.Services.AddScoped<IQuizRepository, QuizRepository>();
+
+           builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            builder.Services.AddScoped<IMaterialService, MaterialService>();
+            
+            builder.Services.AddScoped<ICourseTaskService, CourseTaskService>();
             
             var app = builder.Build();
 

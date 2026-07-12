@@ -1,7 +1,6 @@
 ﻿using LMS.API.Enums.LiveSession;
 namespace LMS.API.Models;
 
-
 public class LiveSession
 {
     public int Id { get; set; }
@@ -20,4 +19,5 @@ public class LiveSession
     public Course Course { get; set; }
     public ICollection<AttendanceLog> AttendanceLogs { get; set; } = new List<AttendanceLog>(); // علاقة One-to-Many مع AttendanceLog
     public virtual ICollection<Material> Materials { get; set; } = new List<Material>(); // علاقة One-to-Many مع Materials
+    
 }
