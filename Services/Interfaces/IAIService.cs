@@ -1,6 +1,11 @@
-﻿public interface IAIService
-{
-    Task<string> GenerateResponse(string question);
+﻿using LMS.API.Services.Implementations;
 
-    Task<(string grade, string feedback)> EvaluateSubmission(string content);
+namespace LMS.API.Services.Interfaces
+{
+    public interface IAIService
+    {
+        Task<string> GenerateResponse(string question);
+
+        Task<(string grade, string feedback)> EvaluateSubmission(string content);
+    }
 }

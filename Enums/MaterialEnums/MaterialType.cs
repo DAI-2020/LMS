@@ -2,8 +2,7 @@
 {
     public enum MaterialType
     {
-        Tech = 1,
-        Nontech = 2
-
+        Technical = 1,
+        NonTechnical = 2
     }
 }

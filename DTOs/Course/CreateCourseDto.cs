@@ -2,7 +2,7 @@
 
 namespace LMS.API.DTOs.Course
 {
-    public class CreateCourse
+    public class CreateCourseDto
     {
         [Required]
         [MaxLength(200)]

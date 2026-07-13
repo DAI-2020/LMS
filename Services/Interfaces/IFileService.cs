@@ -1,6 +1,9 @@
-﻿public interface IFileService
+﻿namespace LMS.API.Services.Interfaces
 {
-    Task<string> UploadMaterialAsync(IFormFile file);
+    public interface IFileService
+    {
+        Task<string> UploadMaterialAsync(IFormFile file);
 
-    Task<string> UploadSubmissionAsync(IFormFile file);
+        Task<string> UploadSubmissionAsync(IFormFile file);
+    }
 }
