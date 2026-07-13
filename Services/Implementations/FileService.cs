@@ -21,7 +21,10 @@ public class FileService : IFileService
 
     private async Task<string> SaveFileAsync(IFormFile file, string subFolder)
     {
-        var uploadsFolder = Path.Combine(_environment.WebRootPath, "uploads", subFolder);
+        var rootPath = _environment.WebRootPath
+            ?? Path.Combine(Directory.GetCurrentDirectory(), "wwwroot");
+
+        var uploadsFolder = Path.Combine(rootPath, "uploads", subFolder);
 
         if (!Directory.Exists(uploadsFolder))
             Directory.CreateDirectory(uploadsFolder);

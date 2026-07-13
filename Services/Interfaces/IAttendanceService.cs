@@ -8,6 +8,5 @@ namespace LMS.API.Services.Interfaces
         Task<bool> LeaveSessionAsync(LeaveSessionDto dto);
         Task<StudentAttendanceSummaryDto?> GetStudentSummaryAsync(int studentId);
         Task<IEnumerable<AttendanceLogDto>> GetSessionAttendanceAsync(int sessionId);
-        Task<AttendanceSummaryResponseDto> GetAttendanceSummaryAsync(int studentId, AttendanceFilterDto filter);
     }
 }

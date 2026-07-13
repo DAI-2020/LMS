@@ -39,5 +39,17 @@ namespace LMS.API.Services.Implementations
             await _deviceRepository.DisconnectDeviceAsync(device);
             return true;
         }
+
+        public async Task<bool> DisconnectAllDevicesAsync(int userId)
+        {
+            var devices = await _deviceRepository.GetDevicesByUserIdAsync(userId);
+            var deviceList = devices.ToList();
+
+            if (!deviceList.Any())
+                return false;
+
+            await _deviceRepository.DisconnectAllDevicesAsync(userId);
+            return true;
+        }
     }
 }

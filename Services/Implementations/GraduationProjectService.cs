@@ -59,6 +59,12 @@ public class GraduationProjectService : IGraduationProjectService
         return projects.Select(MapToResponse);
     }
 
+    public async Task<IEnumerable<GraduationProjectResponseDto>> GetAllAsync()
+    {
+        var projects = await _unitOfWork.GraduationProjects.GetAllAsync();
+        return projects.Select(MapToResponse);
+    }
+
     public async Task<GraduationProjectResponseDto?> UpdateStatusAsync(int id, string status)
     {
         var project = await _unitOfWork.GraduationProjects.GetByIdAsync(id);

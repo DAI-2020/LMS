@@ -1,9 +1,14 @@
+using System.Text;
+using System.Text.Json.Serialization;
 using LMS.API.Data;
 using LMS.API.Repositories.Implementations;
 using LMS.API.Repositories.Interfaces;
 using LMS.API.Services.Implementations;
 using LMS.API.Services.Interfaces;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 
 namespace LMS.API
 {
@@ -15,16 +20,80 @@ namespace LMS.API
 
             // Add services to the container.
 
-            builder.Services.AddControllers();
+            builder.Services.AddControllers()
+                .AddJsonOptions(o =>
+                    o.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
 
+            // Swagger with JWT support
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
+            builder.Services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "LMS API",
+                    Version = "v1"
+                });
 
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.Http,
+                    Scheme = "Bearer",
+                    BearerFormat = "JWT",
+                    In = ParameterLocation.Header,
+                    Description = "Enter your JWT token"
+                });
+
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer"
+                            }
+                        },
+                        Array.Empty<string>()
+                    }
+                });
+            });
+
+            // DbContext
             builder.Services.AddDbContext<LMSDbContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer(
+                    builder.Configuration.GetConnectionString("DefaultConnection")));
 
+            // JWT Authentication
+            var jwtSettings = builder.Configuration.GetSection("Jwt");
+            var secretKey = jwtSettings["SecretKey"]!;
+
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = jwtSettings["Issuer"],
+                    ValidAudience = jwtSettings["Audience"],
+                    IssuerSigningKey = new SymmetricSecurityKey(
+                        Encoding.UTF8.GetBytes(secretKey)),
+                    ClockSkew = TimeSpan.Zero
+                };
+            });
+
+            builder.Services.AddAuthorization();
+
+            // Repositories
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-
             builder.Services.AddScoped<IUserRepository, UserRepository>();
             builder.Services.AddScoped<ICourseRepository, CourseRepository>();
             builder.Services.AddScoped<IMaterialRepository, MaterialRepository>();
@@ -40,11 +109,13 @@ namespace LMS.API
             builder.Services.AddScoped<IFaqRepository, FaqRepository>();
             builder.Services.AddScoped<IUserDeviceRepository, UserDeviceRepository>();
             builder.Services.AddScoped<INotificationPreferenceRepository, NotificationPreferenceRepository>();
-
             builder.Services.AddScoped<IGraduationProjectRepository, GraduationProjectRepository>();
             builder.Services.AddScoped<IQuizRepository, QuizRepository>();
             builder.Services.AddScoped<ITopicRepository, TopicRepository>();
 
+            // Services
+            builder.Services.AddScoped<ITokenService, TokenService>();
+            builder.Services.AddScoped<IAuthService, AuthService>();
             builder.Services.AddScoped<ILiveSessionService, LiveSessionService>();
             builder.Services.AddScoped<IAttendanceService, AttendanceService>();
             builder.Services.AddScoped<IAttendanceSummaryService, AttendanceSummaryService>();
@@ -53,15 +124,24 @@ namespace LMS.API
             builder.Services.AddScoped<IFaqService, FaqService>();
             builder.Services.AddScoped<IUserDeviceService, UserDeviceService>();
             builder.Services.AddScoped<IProfileAndSecurityService, ProfileAndSecurityService>();
-
             builder.Services.AddScoped<IFileService, FileService>();
             builder.Services.AddScoped<IAIService, AIService>();
             builder.Services.AddScoped<IGraduationProjectService, GraduationProjectService>();
             builder.Services.AddScoped<ITaskAndPerformanceService, TaskAndPerformanceService>();
             builder.Services.AddScoped<IAiAssistantService, AiAssistantService>();
+            builder.Services.AddScoped<IQuizService, QuizService>();
+            builder.Services.AddScoped<INotificationPreferenceService, NotificationPreferenceService>();
+            builder.Services.AddScoped<IStudentTaskService, StudentTaskService>();
+            builder.Services.AddScoped<IInstructorTaskService, InstructorTaskService>();
+            builder.Services.AddScoped<ICourseService, CourseService>();
 
             var app = builder.Build();
 
+            using (var scope = app.Services.CreateScope())
+            {
+                var context = scope.ServiceProvider.GetRequiredService<LMSDbContext>();
+                DbInitializer.Initialize(context);
+            }
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
@@ -72,8 +152,8 @@ namespace LMS.API
 
             app.UseHttpsRedirection();
 
+            app.UseAuthentication();
             app.UseAuthorization();
-
 
             app.MapControllers();
 

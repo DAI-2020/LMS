@@ -20,7 +20,7 @@ public class MaterialConfiguration : IEntityTypeConfiguration<Material>
         builder.HasOne(m => m.LiveSession)
            .WithMany()
            .HasForeignKey(m => m.SessionId)
-           .OnDelete(DeleteBehavior.SetNull);
+           .OnDelete(DeleteBehavior.NoAction);
 
         builder.Property(m => m.MaterialType).HasConversion<string>();
         builder.Property(m => m.AttachmentType).HasConversion<string>();

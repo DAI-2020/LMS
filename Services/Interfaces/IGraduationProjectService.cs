@@ -10,5 +10,7 @@ public interface IGraduationProjectService
 
     Task<IEnumerable<GraduationProjectResponseDto>> GetByStudentIdAsync(int studentId);
 
+    Task<IEnumerable<GraduationProjectResponseDto>> GetAllAsync();
+
     Task<GraduationProjectResponseDto?> UpdateStatusAsync(int id, string status);
 }

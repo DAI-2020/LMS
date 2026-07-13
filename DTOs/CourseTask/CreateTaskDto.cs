@@ -26,6 +26,6 @@ namespace LMS.API.DTOs.Task
 
         public DateTime DueDate { get; set; }
 
-        public string AllowedExtensions { get; set; }
+        public string? AllowedExtensions { get; set; }
     }
 }

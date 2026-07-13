@@ -20,7 +20,7 @@ public class CourseTaskConfiguration : IEntityTypeConfiguration<Models.CourseTas
         builder.HasOne(t => t.LiveSession)
                .WithMany()
                .HasForeignKey(t => t.SessionId)
-               .OnDelete(DeleteBehavior.SetNull);
+               .OnDelete(DeleteBehavior.NoAction);
         
         builder.Property(x => x.Description)
        .HasMaxLength(1000);

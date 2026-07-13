@@ -1,10 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\tttttttest\\LMS\\",
+  "WorkspaceRootPath": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\lenovo\\onedrive\\desktop\\tttttttest\\lms\\data\\lmsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\data\\lmsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:data\\lmsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Migrations\\20260713050829_Migrations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260713050829_Migrations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\data\\configurations\\communitypostconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:data\\configurations\\communitypostconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Migrations\\20260713050348_Migrations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260713050348_Migrations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,24 +38,90 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LMSDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\tttttttest\\LMS\\Data\\LMSDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\LMSDbContext.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\tttttttest\\LMS\\Data\\LMSDbContext.cs",
-              "RelativeToolTip": "Data\\LMSDbContext.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAIwBcAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-13T03:04:42.527Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-07-13T05:21:56.028Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "20260713050829_Migrations.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Migrations\\20260713050829_Migrations.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260713050829_Migrations.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Migrations\\20260713050829_Migrations.cs",
+              "RelativeToolTip": "Migrations\\20260713050829_Migrations.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T05:08:29.642Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CommunityPostConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Data\\Configurations\\CommunityPostConfiguration.cs",
+              "RelativeDocumentMoniker": "Data\\Configurations\\CommunityPostConfiguration.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Data\\Configurations\\CommunityPostConfiguration.cs",
+              "RelativeToolTip": "Data\\Configurations\\CommunityPostConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T05:06:07.719Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20260713050348_Migrations.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Migrations\\20260713050348_Migrations.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260713050348_Migrations.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Migrations\\20260713050348_Migrations.cs",
+              "RelativeToolTip": "Migrations\\20260713050348_Migrations.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T05:03:48.69Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAxwBoAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T04:10:14.561Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Role.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Models\\Role.cs",
+              "RelativeDocumentMoniker": "Models\\Role.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Models\\Role.cs",
+              "RelativeToolTip": "Models\\Role.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T03:56:29.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LMSDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Data\\LMSDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\LMSDbContext.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Data\\LMSDbContext.cs",
+              "RelativeToolTip": "Data\\LMSDbContext.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAqwBcAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T03:04:42.527Z"
             }
           ]
         }

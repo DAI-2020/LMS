@@ -6,5 +6,6 @@ namespace LMS.API.Services.Interfaces
     {
         Task<IEnumerable<UserDeviceResponseDto>> GetUserDevicesAsync(int userId, string currentTokenHash);
         Task<bool> DisconnectDeviceAsync(int userId, int deviceId);
+        Task<bool> DisconnectAllDevicesAsync(int userId);
     }
 }

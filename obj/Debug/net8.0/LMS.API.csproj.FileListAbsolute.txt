@@ -338,3 +338,7 @@ C:\Users\LENOVO\OneDrive\Desktop\tttttttest\LMS\obj\Debug\net8.0\refint\LMS.API.
 C:\Users\LENOVO\OneDrive\Desktop\tttttttest\LMS\obj\Debug\net8.0\LMS.API.pdb
 C:\Users\LENOVO\OneDrive\Desktop\tttttttest\LMS\obj\Debug\net8.0\LMS.API.genruntimeconfig.cache
 C:\Users\LENOVO\OneDrive\Desktop\tttttttest\LMS\obj\Debug\net8.0\ref\LMS.API.dll
+C:\Users\nasrat\OneDrive\Desktop\College\LMS\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\nasrat\OneDrive\Desktop\College\LMS\bin\Debug\net8.0\LMS.API.staticwebassets.runtime.json
+C:\Users\nasrat\OneDrive\Desktop\College\LMS\bin\Debug\net8.0\BCrypt-Net-Next.dll
+C:\Users\nasrat\OneDrive\Desktop\College\LMS\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

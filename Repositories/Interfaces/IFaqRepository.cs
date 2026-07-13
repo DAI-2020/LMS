@@ -2,12 +2,7 @@
 
 namespace LMS.API.Repositories.Interfaces
 {
-    public interface IFaqRepository
+    public interface IFaqRepository : IRepository<FAQ>
     {
-        Task<IEnumerable<FAQ>> GetAllAsync();
-        Task<FAQ> GetByIdAsync(int id);
-        Task AddAsync(FAQ faq);
-        void Update(FAQ faq);
-        void Delete(FAQ faq);
     }
 }

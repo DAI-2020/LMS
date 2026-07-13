@@ -1,4 +1,6 @@
-﻿namespace LMS.API.Models;
+﻿using LMS.API.Enums.User;
+
+namespace LMS.API.Models;
 
 public class Role
 {

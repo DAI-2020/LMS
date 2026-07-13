@@ -14,7 +14,7 @@ public class CourseTask
     public AssignmentStatus AssignmentStatus  { get; set; }
 
     public DateTime DueDate { get; set; }
-    public string AllowedExtensions{ get; set;}
+    public string? AllowedExtensions{ get; set;}
     
     //internal relationships
     public Course Course { get; set; }

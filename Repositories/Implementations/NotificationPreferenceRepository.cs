@@ -5,29 +5,17 @@ using Microsoft.EntityFrameworkCore;
 
 namespace LMS.API.Repositories.Implementations
 {
-    public class NotificationPreferenceRepository : INotificationPreferenceRepository
+    public class NotificationPreferenceRepository : Repository<NotificationPreferences>, INotificationPreferenceRepository
     {
-        private readonly LMSDbContext _context;
-
         public NotificationPreferenceRepository(LMSDbContext context)
+            : base(context)
         {
-            _context = context;
         }
 
         public async Task<NotificationPreferences?> GetByUserIdAsync(int userId)
         {
-            return await _context.Notifications
+            return await _dbSet
                 .FirstOrDefaultAsync(n => n.UserId == userId);
-        }
-
-        public async Task AddAsync(NotificationPreferences preferences)
-        {
-            await _context.Notifications.AddAsync(preferences);
-        }
-
-        public void Update(NotificationPreferences preferences)
-        {
-            _context.Notifications.Update(preferences);
         }
 
         public async Task SaveChangesAsync()

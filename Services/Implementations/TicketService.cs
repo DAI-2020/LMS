@@ -29,6 +29,12 @@ namespace LMS.API.Services.Implementations
             return ticket is null ? null : MapToDto(ticket);
         }
 
+        public async Task<IEnumerable<TicketResponseDto>> GetMyTicketsAsync(int studentId)
+        {
+            var tickets = await _ticketRepo.GetFilteredAsync(null, null, null, studentId);
+            return tickets.Select(MapToDto);
+        }
+
         public async Task<IEnumerable<TicketResponseDto>> GetFilteredAsync(
             string? status, string? category, string? priority, int? studentId)
         {

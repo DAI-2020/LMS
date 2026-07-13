@@ -15,6 +15,11 @@ namespace LMS.API.Data.Configurations
                    .WithMany()
                    .HasForeignKey(p => p.UserId)
                    .OnDelete(DeleteBehavior.Cascade);
+
+            builder.HasOne(cp => cp.User)                  
+                .WithMany(u => u.CommunityPosts)        
+                .HasForeignKey(cp => cp.UserId)         
+                .OnDelete(DeleteBehavior.Cascade);      
         }
     }
 }

@@ -5,54 +5,37 @@ using Microsoft.EntityFrameworkCore;
 
 namespace LMS.API.Repositories.Implementations
 {
-    public class UserDeviceRepository : IUserDeviceRepository
+    public class UserDeviceRepository : Repository<UserDevice>, IUserDeviceRepository
     {
-        private readonly LMSDbContext _context;
-
         public UserDeviceRepository(LMSDbContext context)
+            : base(context)
         {
-            _context = context;
-        }
-
-        public async Task<UserDevice?> GetByIdAsync(int id)
-        {
-            return await _context.UserDevices.FindAsync(id);
         }
 
         public async Task<IEnumerable<UserDevice>> GetDevicesByUserIdAsync(int userId)
         {
-            return await _context.UserDevices
+            return await _dbSet
                 .Where(d => d.UserId == userId)
                 .OrderByDescending(d => d.LastUsed)
                 .ToListAsync();
         }
 
-        public async Task AddAsync(UserDevice device)
-        {
-            await _context.UserDevices.AddAsync(device);
-        }
-
-        public void Delete(UserDevice device)
-        {
-            _context.UserDevices.Remove(device);
-        }
-
         public async Task<UserDevice?> GetByRefreshTokenHashAsync(string tokenHash)
         {
-            return await _context.UserDevices
+            return await _dbSet
                 .FirstOrDefaultAsync(d => d.RefreshTokenHash == tokenHash);
         }
 
         public async Task DisconnectDeviceAsync(UserDevice device)
         {
             device.RefreshTokenHash = string.Empty;
-            _context.UserDevices.Update(device);
+            _dbSet.Update(device);
             await _context.SaveChangesAsync();
         }
 
         public async Task DisconnectAllDevicesAsync(int userId)
         {
-            var devices = await _context.UserDevices
+            var devices = await _dbSet
                 .Where(d => d.UserId == userId)
                 .ToListAsync();
 
