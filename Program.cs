@@ -41,6 +41,10 @@ namespace LMS.API
             builder.Services.AddScoped<IUserDeviceRepository, UserDeviceRepository>();
             builder.Services.AddScoped<INotificationPreferenceRepository, NotificationPreferenceRepository>();
 
+            builder.Services.AddScoped<IGraduationProjectRepository, GraduationProjectRepository>();
+            builder.Services.AddScoped<IQuizRepository, QuizRepository>();
+            builder.Services.AddScoped<ITopicRepository, TopicRepository>();
+
             builder.Services.AddScoped<ILiveSessionService, LiveSessionService>();
             builder.Services.AddScoped<IAttendanceService, AttendanceService>();
             builder.Services.AddScoped<IAttendanceSummaryService, AttendanceSummaryService>();
@@ -49,6 +53,12 @@ namespace LMS.API
             builder.Services.AddScoped<IFaqService, FaqService>();
             builder.Services.AddScoped<IUserDeviceService, UserDeviceService>();
             builder.Services.AddScoped<IProfileAndSecurityService, ProfileAndSecurityService>();
+
+            builder.Services.AddScoped<IFileService, FileService>();
+            builder.Services.AddScoped<IAIService, AIService>();
+            builder.Services.AddScoped<IGraduationProjectService, GraduationProjectService>();
+            builder.Services.AddScoped<ITaskAndPerformanceService, TaskAndPerformanceService>();
+            builder.Services.AddScoped<IAiAssistantService, AiAssistantService>();
 
             var app = builder.Build();
 

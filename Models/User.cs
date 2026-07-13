@@ -39,4 +39,8 @@ public class User
     public ICollection<UserDevice> UserDevices { get; set; } = new List<UserDevice>();
 
     public ICollection<NotificationPreferences> NotificationPreferences { get; set; } = new List<NotificationPreferences>();
+
+    public ICollection<GraduationProjectSubmission> GraduationProjectSubmissions { get; set; } = new List<GraduationProjectSubmission>();
+
+    public ICollection<Quiz> Quizzes { get; set; } = new List<Quiz>();
 }

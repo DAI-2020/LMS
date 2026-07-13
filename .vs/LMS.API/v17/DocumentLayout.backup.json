@@ -299,8 +299,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-12T12:25:18.055Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -312,8 +311,7 @@
               "RelativeToolTip": "Services\\Interfaces\\ITicketService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:28:34.835Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:28:34.835Z"
             },
             {
               "$type": "Document",
@@ -323,7 +321,7 @@
               "RelativeDocumentMoniker": "Services\\Implementations\\UserDeviceService.cs",
               "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Services\\Implementations\\UserDeviceService.cs",
               "RelativeToolTip": "Services\\Implementations\\UserDeviceService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-12T12:09:45.628Z",
               "EditorCaption": ""
@@ -338,8 +336,7 @@
               "RelativeToolTip": "Services\\Interfaces\\ILiveSessionService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:32:21.571Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:32:21.571Z"
             },
             {
               "$type": "Document",
@@ -351,8 +348,7 @@
               "RelativeToolTip": "Services\\Interfaces\\IFaqService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-12T12:56:37.425Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-12T12:56:37.425Z"
             },
             {
               "$type": "Document",
@@ -364,8 +360,7 @@
               "RelativeToolTip": "Services\\Interfaces\\IUserDeviceService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-12T12:08:59.049Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-12T12:08:59.049Z"
             },
             {
               "$type": "Document",
@@ -377,8 +372,7 @@
               "RelativeToolTip": "Services\\Interfaces\\ICommunityService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:32:11.595Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:32:11.595Z"
             },
             {
               "$type": "Document",
@@ -390,8 +384,7 @@
               "RelativeToolTip": "Services\\Interfaces\\IAttendanceService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:29:13.608Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:29:13.608Z"
             },
             {
               "$type": "Document",
@@ -403,8 +396,7 @@
               "RelativeToolTip": "Services\\Implementations\\AttendanceService.cs",
               "ViewState": "AgIAAH8AAAAAAAAAAADwv5IAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:34:51.746Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:34:51.746Z"
             },
             {
               "$type": "Document",
@@ -416,8 +408,7 @@
               "RelativeToolTip": "Repositories\\Implementations\\TicketRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T14:26:24.867Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T14:26:24.867Z"
             },
             {
               "$type": "Document",

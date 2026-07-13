@@ -21,7 +21,7 @@ public class LMSDbContext : DbContext
 
     public DbSet<Material> Materials { get; set; }
 
-    public DbSet<Models.CourseTask> CourseTasks { get; set; }
+    public DbSet<CourseTask> CourseTasks { get; set; }
 
     public DbSet<TaskSubmission> TaskSubmissions { get; set; }
     // AI Assistant
@@ -37,6 +37,11 @@ public class LMSDbContext : DbContext
     public DbSet<FAQ> FAQs { get; set; }
     public DbSet<UserDevice> UserDevices { get; set; }
     public DbSet<NotificationPreferences> Notifications { get; set; }
+    // Person A - Graduation Project
+    public DbSet<GraduationProjectSubmission> GraduationProjectSubmissions { get; set; }
+    // Person A - Quizzes & Topics
+    public DbSet<Quiz> Quizzes { get; set; }
+    public DbSet<Topic> Topics { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

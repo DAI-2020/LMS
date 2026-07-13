@@ -14,6 +14,12 @@ namespace LMS.API.Repositories.Implementations
         public ITaskSubmissionRepository TaskSubmissions { get; }
         public IAIChatRepository AIChats { get; }
 
+        public IGraduationProjectRepository GraduationProjects { get; }
+
+        public IQuizRepository Quizzes { get; }
+
+        public ITopicRepository Topics { get; }
+
         public UnitOfWork(
             LMSDbContext context,
             IUserRepository users,
@@ -21,7 +27,10 @@ namespace LMS.API.Repositories.Implementations
             IMaterialRepository materials,
             ICourseTaskRepository courseTasks,
             ITaskSubmissionRepository taskSubmissions,
-            IAIChatRepository aiChats)
+            IAIChatRepository aiChats,
+            IGraduationProjectRepository graduationProjects,
+            IQuizRepository quizzes,
+            ITopicRepository topics)
         {
             _context = context;
             Users = users;
@@ -30,6 +39,9 @@ namespace LMS.API.Repositories.Implementations
             CourseTasks = courseTasks;
             TaskSubmissions = taskSubmissions;
             AIChats = aiChats;
+            GraduationProjects = graduationProjects;
+            Quizzes = quizzes;
+            Topics = topics;
         }
 
         public async Task<int> SaveChangesAsync()
