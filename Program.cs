@@ -137,18 +137,17 @@ namespace LMS.API
 
             var app = builder.Build();
 
-            using (var scope = app.Services.CreateScope())
-            {
-                var context = scope.ServiceProvider.GetRequiredService<LMSDbContext>();
-                DbInitializer.Initialize(context);
-            }
+            //using (var scope = app.Services.CreateScope())
+            //{
+            //    var context = scope.ServiceProvider.GetRequiredService<LMSDbContext>();
+            //    DbInitializer.Initialize(context);
+            //}
 
-            // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
-            {
+            
                 app.UseSwagger();
                 app.UseSwaggerUI();
-            }
+            
+            
 
             app.UseHttpsRedirection();
 
