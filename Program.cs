@@ -135,6 +135,16 @@ namespace LMS.API
             builder.Services.AddScoped<IInstructorTaskService, InstructorTaskService>();
             builder.Services.AddScoped<ICourseService, CourseService>();
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAllOrigins", policy =>
+                {
+                    policy.AllowAnyOrigin()
+                          .AllowAnyMethod()
+                          .AllowAnyHeader();
+                });
+            });
+
             var app = builder.Build();
 
             //using (var scope = app.Services.CreateScope())
@@ -148,6 +158,10 @@ namespace LMS.API
                 app.UseSwaggerUI();
             
             
+
+            app.UseRouting();
+
+            app.UseCors("AllowAllOrigins");
 
             app.UseHttpsRedirection();
 
