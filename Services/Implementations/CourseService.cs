@@ -48,10 +48,16 @@ public class CourseService : ICourseService
 
         var taskSubmissions = await _unitOfWork.TaskSubmissions.GetAllAsync();
         var quizzes = await _unitOfWork.Quizzes.GetAllAsync();
+        var courseTasks = await _unitOfWork.CourseTasks.GetAllAsync();
 
-        var studentCourseIds = taskSubmissions
+        var taskCourseIds = taskSubmissions
             .Where(s => s.StudentId == userId)
-            .Select(s => s.CourseTask.CourseId)
+            .Join(courseTasks,
+                s => s.TaskId,
+                ct => ct.Id,
+                (s, ct) => ct.CourseId);
+
+        var studentCourseIds = taskCourseIds
             .Union(quizzes.Where(q => q.StudentId == userId).Select(q => q.CourseId))
             .Distinct();
 

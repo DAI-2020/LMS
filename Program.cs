@@ -1,6 +1,7 @@
 ﻿using System.Text;
 using System.Text.Json.Serialization;
 using LMS.API.Data;
+using LMS.API.Middleware;
 using LMS.API.Repositories.Implementations;
 using LMS.API.Repositories.Interfaces;
 using LMS.API.Services.Implementations;
@@ -97,6 +98,13 @@ namespace LMS.API
 
             builder.Services.AddAuthorization();
 
+            // CORS
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll", policy =>
+                    policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            });
+
             // Repositories
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
             builder.Services.AddScoped<IUserRepository, UserRepository>();
@@ -171,6 +179,9 @@ namespace LMS.API
 
             app.UseHttpsRedirection();
 
+            app.UseStaticFiles();
+            app.UseCors("AllowAll");
+            app.UseMiddleware<GlobalExceptionHandlerMiddleware>();
             app.UseAuthentication();
             app.UseAuthorization();
 

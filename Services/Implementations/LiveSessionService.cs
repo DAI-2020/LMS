@@ -65,6 +65,22 @@ namespace LMS.API.Services.Implementations
             return recorded.Select(MapToDto);
         }
 
+        public async Task<IEnumerable<LiveSessionResponseDto>> GetMissedSessionsAsync()
+        {
+            var all = await _repository.GetAllAsync();
+            var now = DateTime.UtcNow;
+            var missed = all.Where(ls =>
+                ls.Status == LiveSessionStatus.Upcoming &&
+                ls.ScheduledAt.AddMinutes(ls.DurationMinutes) < now);
+            return missed.Select(MapToDto);
+        }
+
+        public async Task<IEnumerable<LiveSessionResponseDto>> GetCompletedSessionsAsync()
+        {
+            var sessions = await _repository.GetFilteredAsync(LiveSessionStatus.Completed, null, null, null, null, null);
+            return sessions.Select(MapToDto);
+        }
+
         public async Task<LiveSessionResponseDto> CreateAsync(CreateLiveSessionDto dto)
         {
             if (!Enum.TryParse<LiveSessionType>(dto.Type, true, out var type))

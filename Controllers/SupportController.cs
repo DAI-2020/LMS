@@ -65,9 +65,20 @@ public class SupportController : ControllerBase
     [HttpPost("tickets")]
     public async Task<IActionResult> CreateTicket([FromBody] CreateTicketDto dto)
     {
-        dto.StudentId = GetUserId();
-        var created = await _ticketService.CreateAsync(dto);
-        return CreatedAtAction(nameof(GetTicketById), new { id = created.Id }, created);
+        try
+        {
+            dto.StudentId = GetUserId();
+            var created = await _ticketService.CreateAsync(dto);
+            return CreatedAtAction(nameof(GetTicketById), new { id = created.Id }, created);
+        }
+        catch (ArgumentException ex)
+        {
+            return BadRequest(new { message = ex.Message });
+        }
+        catch (Exception)
+        {
+            return StatusCode(500, new { message = "An error occurred while creating the ticket" });
+        }
     }
 
     [Authorize]

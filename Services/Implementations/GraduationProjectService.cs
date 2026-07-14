@@ -80,6 +80,16 @@ public class GraduationProjectService : IGraduationProjectService
         return MapToResponse(project);
     }
 
+    public async Task<bool> DeleteAsync(int id)
+    {
+        var project = await _unitOfWork.GraduationProjects.GetByIdAsync(id);
+        if (project is null) return false;
+
+        _unitOfWork.GraduationProjects.Delete(project);
+        await _unitOfWork.SaveChangesAsync();
+        return true;
+    }
+
     private static GraduationProjectResponseDto MapToResponse(GraduationProjectSubmission project)
     {
         return new GraduationProjectResponseDto

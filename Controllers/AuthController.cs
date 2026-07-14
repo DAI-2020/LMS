@@ -36,9 +36,9 @@ public class AuthController : ControllerBase
 
             return Ok(result.Response);
         }
-        catch (Exception ex)
+        catch (Exception)
         {
-            return StatusCode(500, new { message = "An error occurred during login", detail = ex.Message });
+            return StatusCode(500, new { message = "An error occurred during login" });
         }
     }
 
@@ -53,9 +53,9 @@ public class AuthController : ControllerBase
 
             return Created("", result);
         }
-        catch (Exception ex)
+        catch (Exception)
         {
-            return StatusCode(500, new { message = "An error occurred during registration", detail = ex.Message });
+            return StatusCode(500, new { message = "An error occurred during registration" });
         }
     }
 

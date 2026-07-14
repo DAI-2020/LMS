@@ -29,13 +29,6 @@ public class LiveSessionsController : ControllerBase
         return Ok(sessions);
     }
 
-    [HttpGet("AllSessions")]
-    public async Task<IActionResult> GetAll()
-    {
-        var sessions = await _service.GetAllAsync();
-        return Ok(sessions);
-    }
-
     [HttpGet("upcoming")]
     public async Task<IActionResult> GetUpcoming()
     {
@@ -50,26 +43,25 @@ public class LiveSessionsController : ControllerBase
         return Ok(sessions);
     }
 
+    [HttpGet("completed")]
+    public async Task<IActionResult> GetCompleted()
+    {
+        var sessions = await _service.GetCompletedSessionsAsync();
+        return Ok(sessions);
+    }
+
+    [HttpGet("missed")]
+    public async Task<IActionResult> GetMissed()
+    {
+        var sessions = await _service.GetMissedSessionsAsync();
+        return Ok(sessions);
+    }
+
     [HttpGet("recorded")]
     public async Task<IActionResult> GetRecorded()
     {
         var sessions = await _service.GetRecordedSessionsAsync();
         return Ok(sessions);
-    }
-
-    [HttpGet("timeline")]
-    public async Task<IActionResult> GetTimeline([FromQuery] SessionTimelineFilterDto filter)
-    {
-        var result = await _service.GetTimelineAsync(filter);
-        if (result is null) return NotFound();
-        return Ok(result);
-    }
-
-    [HttpGet("paginated")]
-    public async Task<IActionResult> GetPaginated([FromQuery] PaginatedSessionsRequestDto request)
-    {
-        var result = await _service.GetPaginatedAsync(request);
-        return Ok(result);
     }
 
     [HttpGet("{id}")]
@@ -91,15 +83,6 @@ public class LiveSessionsController : ControllerBase
     [Authorize(Roles = "Admin,Instructor")]
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(int id, [FromBody] UpdateLiveSessionDto dto)
-    {
-        var updated = await _service.UpdateAsync(id, dto);
-        if (updated is null) return NotFound();
-        return Ok(updated);
-    }
-
-    [Authorize(Roles = "Admin,Instructor")]
-    [HttpPatch("{id}")]
-    public async Task<IActionResult> Patch(int id, [FromBody] UpdateLiveSessionDto dto)
     {
         var updated = await _service.UpdateAsync(id, dto);
         if (updated is null) return NotFound();

@@ -1,4 +1,6 @@
-﻿public interface IAIService
+﻿namespace LMS.API.Services.Interfaces;
+
+public interface IAIService
 {
     Task<string> GenerateResponse(string question);
 

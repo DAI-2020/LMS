@@ -10,16 +10,10 @@ namespace LMS.API.Data.Configurations
         {
             builder.HasKey(p => p.Id);
 
-            // 7. العلاقة بين CommunityPost و User
             builder.HasOne(p => p.User)
-                   .WithMany()
+                   .WithMany(u => u.CommunityPosts)
                    .HasForeignKey(p => p.UserId)
                    .OnDelete(DeleteBehavior.Cascade);
-
-            builder.HasOne(cp => cp.User)                  
-                .WithMany(u => u.CommunityPosts)        
-                .HasForeignKey(cp => cp.UserId)         
-                .OnDelete(DeleteBehavior.Cascade);      
         }
     }
 }

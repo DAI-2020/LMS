@@ -12,15 +12,9 @@ namespace LMS.API.Data.Configurations
 
             // 4. العلاقة بين Ticket و User (Student)
             builder.HasOne(t => t.Student)
-                .WithMany()
+                .WithMany(u => u.Tickets)
                 .HasForeignKey(t => t.StudentId)
                 .OnDelete(DeleteBehavior.Restrict);
-
-            // 5. العلاقة بين Ticket و TicketReply
-            builder.HasMany(t => t.TicketReplies)
-                .WithOne(tr => tr.Ticket)
-                .HasForeignKey(tr => tr.TicketId)
-                .OnDelete(DeleteBehavior.Cascade);
 
             // تحويل الـ Enums الخاصة بالتذكرة لـ Strings
             builder.Property(t => t.Category)

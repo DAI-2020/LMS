@@ -42,7 +42,7 @@ public class CoursesController : ControllerBase
         return Ok(course);
     }
 
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin,Instructor")]
     [HttpPost]
     public async Task<IActionResult> Create([FromBody] CreateCourse dto)
     {
@@ -59,7 +59,7 @@ public class CoursesController : ControllerBase
         return Ok(updated);
     }
 
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin,Instructor")]
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(int id)
     {

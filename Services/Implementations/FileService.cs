@@ -1,4 +1,6 @@
-﻿namespace LMS.API.Services.Implementations;
+﻿using LMS.API.Services.Interfaces;
+
+namespace LMS.API.Services.Implementations;
 
 public class FileService : IFileService
 {

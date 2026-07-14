@@ -18,7 +18,7 @@ namespace LMS.API.Data.Configurations
 
             // 3. العلاقة بين AttendanceLog و User (الطالب)
             builder.HasOne(a => a.Student)
-               .WithMany()
+               .WithMany(u => u.AttendanceLogs)
                .HasForeignKey(a => a.StudentId)
                .OnDelete(DeleteBehavior.Restrict); // منعا للـ Multiple Cascade Paths
 

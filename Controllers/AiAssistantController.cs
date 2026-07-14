@@ -21,37 +21,65 @@ public class AiAssistantController : ControllerBase
     [HttpPost("chat")]
     public async Task<IActionResult> GeneralChat([FromBody] AiChatRequestDto dto)
     {
-        dto.StudentId = GetUserId();
-        var result = await _service.ChatAsync(dto);
-        if (result is null) return BadRequest(new { message = "Could not process request" });
-        return Ok(result);
+        try
+        {
+            dto.StudentId = GetUserId();
+            var result = await _service.ChatAsync(dto);
+            if (result is null) return BadRequest(new { message = "Could not process request" });
+            return Ok(result);
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new { message = "An error occurred while processing your request", detail = ex.Message });
+        }
     }
 
     [HttpPost("help-me-writing")]
     public async Task<IActionResult> HelpMeWriting([FromBody] HelpMeWritingDto dto)
     {
-        var userId = GetUserId();
-        var result = await _service.HelpMeWritingAsync(userId, dto.CourseId, dto.Text);
-        if (result is null) return BadRequest(new { message = "Could not process request" });
-        return Ok(result);
+        try
+        {
+            var userId = GetUserId();
+            var result = await _service.HelpMeWritingAsync(userId, dto.CourseId, dto.Text);
+            if (result is null) return BadRequest(new { message = "Could not process request" });
+            return Ok(result);
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new { message = "An error occurred while processing your request", detail = ex.Message });
+        }
     }
 
     [HttpPost("study-plan")]
     public async Task<IActionResult> CreateStudyPlan([FromBody] StudyPlanDto dto)
     {
-        var userId = GetUserId();
-        var result = await _service.CreateStudyPlanAsync(userId, dto.CourseId, dto.AdditionalInfo);
-        if (result is null) return BadRequest(new { message = "Could not process request" });
-        return Ok(result);
+        try
+        {
+            var userId = GetUserId();
+            var result = await _service.CreateStudyPlanAsync(userId, dto.CourseId, dto.AdditionalInfo);
+            if (result is null) return BadRequest(new { message = "Could not process request" });
+            return Ok(result);
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new { message = "An error occurred while processing your request", detail = ex.Message });
+        }
     }
 
     [HttpPost("summarize")]
     public async Task<IActionResult> SummarizeLesson([FromBody] SummarizeLessonDto dto)
     {
-        var userId = GetUserId();
-        var result = await _service.SummarizeLessonAsync(userId, dto.CourseId, dto.LessonContent);
-        if (result is null) return BadRequest(new { message = "Could not process request" });
-        return Ok(result);
+        try
+        {
+            var userId = GetUserId();
+            var result = await _service.SummarizeLessonAsync(userId, dto.CourseId, dto.LessonContent);
+            if (result is null) return BadRequest(new { message = "Could not process request" });
+            return Ok(result);
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new { message = "An error occurred while processing your request", detail = ex.Message });
+        }
     }
 
     private int GetUserId() => int.Parse(User.FindFirstValue("UserId")!);

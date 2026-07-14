@@ -78,5 +78,14 @@ public class GraduationProjectController : ControllerBase
         }
     }
 
+    [Authorize(Roles = "Admin")]
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteProject(int id)
+    {
+        var result = await _service.DeleteAsync(id);
+        if (!result) return NotFound();
+        return NoContent();
+    }
+
     private int GetUserId() => int.Parse(User.FindFirstValue("UserId")!);
 }

@@ -13,4 +13,6 @@ public interface IGraduationProjectService
     Task<IEnumerable<GraduationProjectResponseDto>> GetAllAsync();
 
     Task<GraduationProjectResponseDto?> UpdateStatusAsync(int id, string status);
+
+    Task<bool> DeleteAsync(int id);
 }
