@@ -37,4 +37,11 @@ public class QuizRepository : Repository<Quiz>, IQuizRepository
             .Include(x => x.Topic)
             .ToListAsync();
     }
+
+    public async Task<IEnumerable<Quiz>> GetAllWithTopicAsync()
+    {
+        return await _dbSet
+            .Include(x => x.Topic)
+            .ToListAsync();
+    }
 }

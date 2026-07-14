@@ -92,9 +92,11 @@ namespace LMS.API.Services.Implementations
             var session = await _repository.GetByIdAsync(id);
             if (session is null) return null;
 
+            if (dto.CourseId.HasValue) session.CourseId = dto.CourseId.Value;
             if (dto.Title is not null) session.Title = dto.Title;
             if (dto.ScheduledAt.HasValue) session.ScheduledAt = dto.ScheduledAt.Value;
             if (dto.DurationMinutes.HasValue) session.DurationMinutes = dto.DurationMinutes.Value;
+            if (dto.WeekNumber.HasValue) session.WeekNumber = dto.WeekNumber.Value;
             if (dto.RecordingUrl is not null) session.RecordingUrl = dto.RecordingUrl;
 
             if (!string.IsNullOrWhiteSpace(dto.Status) && Enum.TryParse<LiveSessionStatus>(dto.Status, true, out var status))
@@ -115,8 +117,107 @@ namespace LMS.API.Services.Implementations
             return true;
         }
 
+        public async Task<SessionTimelineResponseDto?> GetTimelineAsync(SessionTimelineFilterDto filter)
+        {
+            var year = filter.Year ?? DateTime.UtcNow.Year;
+            var month = filter.Month ?? DateTime.UtcNow.Month;
+            var startDate = new DateTime(year, month, 1, 0, 0, 0, DateTimeKind.Utc);
+            var endDate = startDate.AddMonths(1).AddTicks(-1);
+
+            LiveSessionStatus? parsedStatus = null;
+            DeliveryMode? parsedMode = null;
+
+            if (!string.IsNullOrWhiteSpace(filter.Category))
+            {
+                if (filter.Category.Equals("Completed", StringComparison.OrdinalIgnoreCase))
+                    parsedStatus = LiveSessionStatus.Completed;
+                else if (filter.Category.Equals("Missed", StringComparison.OrdinalIgnoreCase))
+                    parsedStatus = LiveSessionStatus.Cancelled;
+            }
+
+            if (!string.IsNullOrWhiteSpace(filter.Mode) && Enum.TryParse<DeliveryMode>(filter.Mode, true, out var m))
+                parsedMode = m;
+
+            var sessions = await _repository.GetFilteredAsync(parsedStatus, null, parsedMode, filter.CourseId, startDate, endDate);
+
+            if (!string.IsNullOrWhiteSpace(filter.Category) &&
+                filter.Category.Equals("TodaysSession", StringComparison.OrdinalIgnoreCase))
+            {
+                sessions = sessions.Where(s => s.ScheduledAt.Date == DateTime.UtcNow.Date);
+            }
+
+            if (filter.WeekNumber.HasValue)
+                sessions = sessions.Where(s => s.WeekNumber == filter.WeekNumber.Value);
+
+            var grouped = sessions
+                .GroupBy(s => s.ScheduledAt.Date)
+                .OrderBy(g => g.Key);
+
+            var days = grouped.Select(g => new SessionTimelineDayDto
+            {
+                Date = g.Key,
+                DayName = g.Key.ToString("dddd"),
+                SessionCount = g.Count(),
+                Sessions = g.Select(MapToDto).ToList()
+            }).ToList();
+
+            return new SessionTimelineResponseDto
+            {
+                Year = year,
+                Month = month,
+                MonthName = startDate.ToString("MMMM"),
+                Days = days,
+                TotalSessions = sessions.Count()
+            };
+        }
+
+        public async Task<PaginatedSessionsResponseDto> GetPaginatedAsync(PaginatedSessionsRequestDto request)
+        {
+            DeliveryMode? parsedMode = null;
+            LiveSessionStatus? parsedStatus = null;
+            LiveSessionType? parsedType = null;
+
+            if (!string.IsNullOrWhiteSpace(request.Mode) && Enum.TryParse<DeliveryMode>(request.Mode, true, out var mode))
+                parsedMode = mode;
+            if (!string.IsNullOrWhiteSpace(request.Status) && Enum.TryParse<LiveSessionStatus>(request.Status, true, out var status))
+                parsedStatus = status;
+            if (!string.IsNullOrWhiteSpace(request.Type) && Enum.TryParse<LiveSessionType>(request.Type, true, out var type))
+                parsedType = type;
+
+            var allSessions = await _repository.GetFilteredAsync(parsedStatus, parsedType, parsedMode, request.CourseId, null, null);
+
+            if (!string.IsNullOrWhiteSpace(request.Search))
+                allSessions = allSessions.Where(s =>
+                    s.Title.Contains(request.Search, StringComparison.OrdinalIgnoreCase) ||
+                    s.Course.Title.Contains(request.Search, StringComparison.OrdinalIgnoreCase));
+
+            var list = allSessions.ToList();
+            var totalCount = list.Count;
+
+            var paged = list
+                .Skip((request.Page - 1) * request.PageSize)
+                .Take(request.PageSize)
+                .ToList();
+
+            return new PaginatedSessionsResponseDto
+            {
+                Items = paged.Select(MapToCardDto).ToList(),
+                TotalCount = totalCount,
+                Page = request.Page,
+                PageSize = request.PageSize
+            };
+        }
+
         private static LiveSessionResponseDto MapToDto(LiveSession session)
         {
+            var now = DateTime.UtcNow;
+            var sessionEnd = session.ScheduledAt.AddMinutes(session.DurationMinutes);
+            string actionLabel;
+            if (session.Status == LiveSessionStatus.Completed || (now > sessionEnd && session.Status != LiveSessionStatus.Live))
+                actionLabel = "View Session Record";
+            else
+                actionLabel = "Join Session";
+
             return new LiveSessionResponseDto
             {
                 Id = session.Id,
@@ -130,6 +231,39 @@ namespace LMS.API.Services.Implementations
                 Type = session.Type.ToString(),
                 Mode = session.Mode.ToString(),
                 RecordingUrl = session.RecordingUrl,
+                AttendanceCount = session.AttendanceLogs?.Count ?? 0,
+                HasAttendance = session.AttendanceLogs?.Any() ?? false,
+                HasTask = session.Materials?.Any() ?? false,
+                HasSurvey = false,
+                ActionLabel = actionLabel
+            };
+        }
+
+        private static LiveSessionCardDto MapToCardDto(LiveSession session)
+        {
+            var now = DateTime.UtcNow;
+            var sessionEnd = session.ScheduledAt.AddMinutes(session.DurationMinutes);
+            string actionLabel;
+            if (session.Status == LiveSessionStatus.Completed || (now > sessionEnd && session.Status != LiveSessionStatus.Live))
+                actionLabel = "View Session Record";
+            else
+                actionLabel = "Join Session";
+
+            return new LiveSessionCardDto
+            {
+                Id = session.Id,
+                Title = session.Title,
+                CourseName = session.Course?.Title ?? string.Empty,
+                Status = session.Status.ToString(),
+                Type = session.Type.ToString(),
+                Mode = session.Mode.ToString(),
+                ScheduledAt = session.ScheduledAt,
+                DurationMinutes = session.DurationMinutes,
+                HasAttendance = session.AttendanceLogs?.Any() ?? false,
+                HasTask = session.Materials?.Any() ?? false,
+                HasSurvey = false,
+                RecordingUrl = session.RecordingUrl,
+                ActionLabel = actionLabel,
                 AttendanceCount = session.AttendanceLogs?.Count ?? 0
             };
         }

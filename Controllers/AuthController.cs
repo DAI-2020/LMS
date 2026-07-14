@@ -1,4 +1,5 @@
 using System.Security.Claims;
+using LMS.API.DTOs.Admin;
 using LMS.API.DTOs.Auth;
 using LMS.API.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
@@ -12,11 +13,16 @@ public class AuthController : ControllerBase
 {
     private readonly IAuthService _authService;
     private readonly IProfileAndSecurityService _profileService;
+    private readonly IAdminService _adminService;
 
-    public AuthController(IAuthService authService, IProfileAndSecurityService profileService)
+    public AuthController(
+        IAuthService authService,
+        IProfileAndSecurityService profileService,
+        IAdminService adminService)
     {
         _authService = authService;
         _profileService = profileService;
+        _adminService = adminService;
     }
 
     [HttpPost("login")]
@@ -25,10 +31,10 @@ public class AuthController : ControllerBase
         try
         {
             var result = await _authService.LoginAsync(dto);
-            if (result is null)
-                return Unauthorized(new { message = "Invalid email or password" });
+            if (!result.IsSuccess)
+                return Unauthorized(new { message = "Invalid email or password", debug = result.ErrorDetail });
 
-            return Ok(result);
+            return Ok(result.Response);
         }
         catch (Exception ex)
         {
@@ -77,5 +83,65 @@ public class AuthController : ControllerBase
         var result = await _profileService.ChangePasswordAsync(userId, dto.OldPassword, dto.NewPassword);
         if (!result) return BadRequest(new { message = "Old password is incorrect" });
         return Ok(new { message = "Password changed successfully" });
+    }
+
+    [HttpPost("forgot-password")]
+    public async Task<IActionResult> ForgotPassword([FromBody] ForgotPasswordDto dto)
+    {
+        var result = await _authService.ForgotPasswordAsync(dto);
+        return Ok(result);
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpPost("create-user")]
+    public async Task<IActionResult> CreateUser([FromBody] CreateUserWithRoleDto dto)
+    {
+        var result = await _adminService.CreateUserWithRoleAsync(dto);
+        if (result is null)
+            return BadRequest(new { message = "User already exists or role is invalid." });
+
+        return Ok(result);
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpPut("update-user")]
+    public async Task<IActionResult> UpdateUser([FromBody] UpdateUserDto dto)
+    {
+        var result = await _adminService.UpdateUserAsync(dto);
+        if (!result)
+            return NotFound(new { message = "User not found or role is invalid." });
+
+        return Ok(new { message = "User updated successfully." });
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpDelete("delete-user/{email}")]
+    public async Task<IActionResult> DeleteUser(string email)
+    {
+        var result = await _adminService.DeleteUserAsync(email);
+        if (!result)
+            return NotFound(new { message = "User not found." });
+
+        return Ok(new { message = "User deleted successfully." });
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpGet("roles")]
+    public async Task<IActionResult> GetAllRoles()
+    {
+        var roles = await _adminService.GetAllRolesAsync();
+        return Ok(roles);
+    }
+
+    [Authorize]
+    [HttpGet("debug-token")]
+    public IActionResult DebugToken()
+    {
+        var claims = User.Claims.Select(c => new { c.Type, c.Value });
+        return Ok(new
+        {
+            IsAuthenticated = User.Identity?.IsAuthenticated,
+            Claims = claims
+        });
     }
 }

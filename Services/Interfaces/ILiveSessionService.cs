@@ -13,5 +13,7 @@ namespace LMS.API.Services.Interfaces
         Task<LiveSessionResponseDto> CreateAsync(CreateLiveSessionDto dto);
         Task<LiveSessionResponseDto?> UpdateAsync(int id, UpdateLiveSessionDto dto);
         Task<bool> DeleteAsync(int id);
+        Task<SessionTimelineResponseDto?> GetTimelineAsync(SessionTimelineFilterDto filter);
+        Task<PaginatedSessionsResponseDto> GetPaginatedAsync(PaginatedSessionsRequestDto request);
     }
 }

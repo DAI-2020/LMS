@@ -30,30 +30,42 @@ namespace LMS.API.Services.Implementations
             _dbContext = dbContext;
         }
 
-        public async Task<AuthResponseDto?> LoginAsync(LoginDto dto)
+        public async Task<LoginResult> LoginAsync(LoginDto dto)
         {
             var user = await _userRepository.GetByEmailAsync(dto.Email);
             if (user is null)
-                return null;
+                return new LoginResult
+                {
+                    ErrorDetail = "Debug: User not found in database for this email."
+                };
 
             if (!VerifyPasswordHash(dto.Password, user.PasswordHash))
-                return null;
+                return new LoginResult
+                {
+                    ErrorDetail = "Debug: User found, but BCrypt.Verify returned false. Check hash match."
+                };
 
-            var roles = await GetAllUserRolesAsync(user.Id);
+            var roles = user.UserRoles.Select(ur => ur.Role.Name).ToList();
             if (roles.Count == 0)
-                return null;
+                return new LoginResult
+                {
+                    ErrorDetail = "Debug: User found and password valid, but no roles assigned in UserRoles table."
+                };
 
             var expiryInMinutes = int.Parse(
                 _configuration["Jwt:ExpiryInMinutes"]!);
 
-            return new AuthResponseDto
+            return new LoginResult
             {
-                UserId = user.Id,
-                FullName = user.FullName,
-                Email = user.Email,
-                Roles = roles,
-                Token = _tokenService.GenerateToken(user, roles),
-                TokenExpiry = DateTime.UtcNow.AddMinutes(expiryInMinutes)
+                Response = new AuthResponseDto
+                {
+                    UserId = user.Id,
+                    FullName = user.FullName,
+                    Email = user.Email,
+                    Roles = roles,
+                    Token = _tokenService.GenerateToken(user, roles),
+                    TokenExpiry = DateTime.UtcNow.AddMinutes(expiryInMinutes)
+                }
             };
         }
 
@@ -103,15 +115,6 @@ namespace LMS.API.Services.Implementations
             };
         }
 
-        private async Task<List<string>> GetAllUserRolesAsync(int userId)
-        {
-            return await _dbContext.UserRoles
-                .Include(ur => ur.Role)
-                .Where(ur => ur.UserId == userId)
-                .Select(ur => ur.Role.Name)
-                .ToListAsync();
-        }
-
         private static bool VerifyPasswordHash(string password, string storedHash)
         {
             return BCrypt.Net.BCrypt.Verify(password, storedHash);
@@ -120,6 +123,27 @@ namespace LMS.API.Services.Implementations
         private static string HashPassword(string password)
         {
             return BCrypt.Net.BCrypt.HashPassword(password);
+        }
+
+        public async Task<ForgotPasswordResponseDto> ForgotPasswordAsync(ForgotPasswordDto dto)
+        {
+            var user = await _userRepository.GetByEmailAsync(dto.Email);
+            if (user is null)
+                return new ForgotPasswordResponseDto
+                {
+                    Success = true,
+                    Message = "If an account with that email exists, a password reset token has been generated."
+                };
+
+            var resetToken = Convert.ToBase64String(Guid.NewGuid().ToByteArray());
+            var expiry = DateTime.UtcNow.AddHours(1);
+
+            return new ForgotPasswordResponseDto
+            {
+                Success = true,
+                Message = "Password reset token generated successfully.",
+                ResetToken = resetToken
+            };
         }
     }
 }

@@ -13,5 +13,6 @@ namespace LMS.API.Repositories.Interfaces
         Task UpdateAsync(LiveSession session);
         Task DeleteAsync(int id);
         Task<bool> ExistsAsync(int id);
+        Task<int> CountAsync(Func<LiveSession, bool> predicate);
     }
 }

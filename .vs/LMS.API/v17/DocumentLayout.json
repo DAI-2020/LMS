@@ -5,10 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -28,22 +24,9 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAJQAAAAAAAAAAAAAAJEAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAQwEEAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-13T09:43:37.719Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAChAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-07-13T05:21:56.028Z",
+              "WhenOpened": "2026-07-14T08:42:21.859Z",
               "EditorCaption": ""
             }
           ]

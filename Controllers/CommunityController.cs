@@ -46,9 +46,8 @@ public class CommunityController : ControllerBase
     {
         var userId = GetUserId();
         var isAdmin = User.IsInRole("Admin");
-        var posts = await _service.GetAllAsync();
-        var post = posts.FirstOrDefault(p => p.Id == id);
 
+        var post = await _service.GetByIdAsync(id);
         if (post is null) return NotFound();
         if (post.UserId != userId && !isAdmin)
             return Forbid();

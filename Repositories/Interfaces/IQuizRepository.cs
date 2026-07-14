@@ -9,4 +9,6 @@ public interface IQuizRepository : IRepository<Quiz>
     Task<IEnumerable<Quiz>> GetByCourseIdAsync(int courseId);
 
     Task<IEnumerable<Quiz>> GetByStudentAndCourseAsync(int studentId, int courseId);
+
+    Task<IEnumerable<Quiz>> GetAllWithTopicAsync();
 }

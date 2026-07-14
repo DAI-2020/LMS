@@ -18,6 +18,8 @@ namespace LMS.API.Repositories.Implementations
         {
             return await _context.LiveSessions
                 .Include(ls => ls.Course)
+                .Include(ls => ls.AttendanceLogs)
+                .Include(ls => ls.Materials)
                 .OrderBy(ls => ls.WeekNumber)
                 .ThenByDescending(ls => ls.ScheduledAt)
                 .ToListAsync();
@@ -27,6 +29,8 @@ namespace LMS.API.Repositories.Implementations
         {
             return await _context.LiveSessions
                 .Include(ls => ls.Course)
+                .Include(ls => ls.AttendanceLogs)
+                .Include(ls => ls.Materials)
                 .FirstOrDefaultAsync(ls => ls.Id == id);
         }
 
@@ -36,6 +40,8 @@ namespace LMS.API.Repositories.Implementations
         {
             var query = _context.LiveSessions
                 .Include(ls => ls.Course)
+                .Include(ls => ls.AttendanceLogs)
+                .Include(ls => ls.Materials)
                 .AsQueryable();
 
             if (status.HasValue)
@@ -61,6 +67,8 @@ namespace LMS.API.Repositories.Implementations
         {
             return await _context.LiveSessions
                 .Include(ls => ls.Course)
+                .Include(ls => ls.AttendanceLogs)
+                .Include(ls => ls.Materials)
                 .Where(ls => ls.Status == LiveSessionStatus.Upcoming || ls.Status == LiveSessionStatus.Live)
                 .OrderBy(ls => ls.WeekNumber)        
                 .ThenBy(ls => ls.ScheduledAt)
@@ -93,6 +101,14 @@ namespace LMS.API.Repositories.Implementations
         public async Task<bool> ExistsAsync(int id)
         {
             return await _context.LiveSessions.AnyAsync(ls => ls.Id == id);
+        }
+
+        public async Task<int> CountAsync(Func<LiveSession, bool> predicate)
+        {
+            return await Task.FromResult(_context.LiveSessions
+                .Include(ls => ls.Course)
+                .Where(predicate)
+                .Count());
         }
     }
 }

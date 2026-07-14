@@ -14,5 +14,9 @@ namespace LMS.API.DTOs.LiveSession
         public int WeekNumber { get; set; }
         public string? RecordingUrl { get; set; }
         public int AttendanceCount { get; set; }
+        public bool HasAttendance { get; set; }
+        public bool HasTask { get; set; }
+        public bool HasSurvey { get; set; }
+        public string? ActionLabel { get; set; }
     }
 }

@@ -5,6 +5,8 @@
         Upcoming,
         Live,
         Completed,
-        Cancelled
+        Cancelled,
+        TodaySession,
+        Pending
     }
 }

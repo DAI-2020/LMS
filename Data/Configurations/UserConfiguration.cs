@@ -23,7 +23,8 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
                .IsUnique();
 
         builder.Property(x => x.PasswordHash)
-               .IsRequired();
+               .IsRequired()
+               .HasMaxLength(256);
 
         builder.Property(x => x.Gender)
                .HasConversion<string>()

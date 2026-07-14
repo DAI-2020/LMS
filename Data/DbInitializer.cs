@@ -9,18 +9,20 @@ public static class DbInitializer
 {
     public static void Initialize(LMSDbContext context)
     {
-        context.Database.EnsureCreated();
+        Console.WriteLine("--> Database Seeding process started...");
 
-        if (context.Users.Any())
-            return;
+        context.Database.EnsureCreated();
 
         SeedRoles(context);
         SeedUsers(context);
+        SeedUserRoles(context);
         SeedCourses(context);
         SeedTopics(context);
         SeedFaqs(context);
 
         context.SaveChanges();
+
+        Console.WriteLine("--> Database Seeding completed successfully!");
     }
 
     private static string HashPassword(string password)
@@ -30,83 +32,115 @@ public static class DbInitializer
 
     private static void SeedRoles(LMSDbContext context)
     {
-        var roles = new[]
+        if (context.Roles.Any())
         {
+            Console.WriteLine($"--> Roles already exist ({context.Roles.Count()}). Skipping.");
+            return;
+        }
+
+        Console.WriteLine("--> Seeding Roles...");
+        context.Roles.AddRange(
             new Role { Id = (int)RoleType.Admin, Name = RoleType.Admin.ToString() },
             new Role { Id = (int)RoleType.Instructor, Name = RoleType.Instructor.ToString() },
             new Role { Id = (int)RoleType.Student, Name = RoleType.Student.ToString() }
-        };
-        context.Roles.AddRange(roles);
+        );
+        context.SaveChanges();
+        Console.WriteLine($"--> Seeding Roles... Done. Added {context.Roles.Count()} roles.");
     }
 
     private static void SeedUsers(LMSDbContext context)
     {
-        var password = "pasword123";
+        if (context.Users.Any())
+        {
+            Console.WriteLine($"--> Users already exist ({context.Users.Count()}). Skipping.");
+            return;
+        }
+
+        Console.WriteLine("--> Seeding Users...");
+        var password = "password123";
         var hashedPassword = HashPassword(password);
 
-        var admin1 = new User
-        {
-            FullName = "Mohamed Samy",
-            Email = "mohamedsamy@gmail.com",
-            PasswordHash = hashedPassword,
-            CreatedAt = DateTime.UtcNow,
-            Gender = Gender.Male
-        };
-
-        var admin2 = new User
-        {
-            FullName = "Dai Ahmed",
-            Email = "daiahmed@gmail.com",
-            PasswordHash = hashedPassword,
-            CreatedAt = DateTime.UtcNow,
-            Gender = Gender.Male
-        };
-
-        var instructor = new User
-        {
-            FullName = "Dai Instructor",
-            Email = "daiinstructor@gmail.com",
-            PasswordHash = hashedPassword,
-            CreatedAt = DateTime.UtcNow,
-            Gender = Gender.Male
-        };
-
-        var instructorTest = new User
-        {
-            FullName = "Instructor Test",
-            Email = "instructor_test@example.com",
-            PasswordHash = hashedPassword,
-            CreatedAt = DateTime.UtcNow,
-            Gender = Gender.Male
-        };
-
-        var student = new User
-        {
-            FullName = "Ahmed Student",
-            Email = "ahmedstudent@gmail.com",
-            PasswordHash = hashedPassword,
-            CreatedAt = DateTime.UtcNow,
-            Gender = Gender.Male
-        };
-
-        context.Users.AddRange(admin1, admin2, instructor, instructorTest, student);
+        context.Users.AddRange(
+            new User
+            {
+                FullName = "Mohamed Samy",
+                Email = "mohamedsamy@lms.com",
+                PasswordHash = hashedPassword,
+                CreatedAt = DateTime.UtcNow,
+                Gender = Gender.Male
+            },
+            new User
+            {
+                FullName = "Dai Ahmed",
+                Email = "daiahmed@lms.com",
+                PasswordHash = hashedPassword,
+                CreatedAt = DateTime.UtcNow,
+                Gender = Gender.Male
+            },
+            new User
+            {
+                FullName = "Dai Instructor",
+                Email = "daiinstructor@lms.com",
+                PasswordHash = hashedPassword,
+                CreatedAt = DateTime.UtcNow,
+                Gender = Gender.Male
+            },
+            new User
+            {
+                FullName = "Instructor Test",
+                Email = "instructortest@lms.com",
+                PasswordHash = hashedPassword,
+                CreatedAt = DateTime.UtcNow,
+                Gender = Gender.Male
+            },
+            new User
+            {
+                FullName = "Ahmed Student",
+                Email = "ahmedstudent@lms.com",
+                PasswordHash = hashedPassword,
+                CreatedAt = DateTime.UtcNow,
+                Gender = Gender.Male
+            }
+        );
         context.SaveChanges();
+        Console.WriteLine($"--> Seeding Users... Done. Added {context.Users.Count()} users.");
+    }
+
+    private static void SeedUserRoles(LMSDbContext context)
+    {
+        if (context.UserRoles.Any())
+        {
+            Console.WriteLine($"--> UserRoles already exist ({context.UserRoles.Count()}). Skipping.");
+            return;
+        }
+
+        Console.WriteLine("--> Seeding UserRoles...");
+        var users = context.Users.ToDictionary(u => u.Email);
+        var roles = context.Roles.ToDictionary(r => r.Name);
 
         context.UserRoles.AddRange(
-            new UserRole { UserId = admin1.Id, RoleId = (int)RoleType.Admin },
-            new UserRole { UserId = admin2.Id, RoleId = (int)RoleType.Admin },
-            new UserRole { UserId = instructor.Id, RoleId = (int)RoleType.Instructor },
-            new UserRole { UserId = instructorTest.Id, RoleId = (int)RoleType.Instructor },
-            new UserRole { UserId = student.Id, RoleId = (int)RoleType.Student }
+            new UserRole { UserId = users["mohamedsamy@lms.com"].Id, RoleId = roles["Admin"].Id },
+            new UserRole { UserId = users["daiahmed@lms.com"].Id, RoleId = roles["Admin"].Id },
+            new UserRole { UserId = users["daiinstructor@lms.com"].Id, RoleId = roles["Instructor"].Id },
+            new UserRole { UserId = users["instructortest@lms.com"].Id, RoleId = roles["Instructor"].Id },
+            new UserRole { UserId = users["ahmedstudent@lms.com"].Id, RoleId = roles["Student"].Id }
         );
+        context.SaveChanges();
+        Console.WriteLine($"--> Seeding UserRoles... Done. Added {context.UserRoles.Count()} mappings.");
     }
 
     private static void SeedCourses(LMSDbContext context)
     {
-        var instructor = context.Users.First(u => u.Email == "daiinstructor@gmail.com");
-
-        var courses = new[]
+        if (context.Courses.Any())
         {
+            Console.WriteLine($"--> Courses already exist ({context.Courses.Count()}). Skipping.");
+            return;
+        }
+
+        Console.WriteLine("--> Seeding Courses...");
+        var instructor = context.Users.First(u => u.Email == "daiinstructor@lms.com");
+
+        context.Courses.AddRange(
             new Course
             {
                 Title = "Introduction to Computer Science",
@@ -125,14 +159,21 @@ public static class DbInitializer
                 Description = "Full-stack web development with ASP.NET Core",
                 InstructorId = instructor.Id
             }
-        };
-        context.Courses.AddRange(courses);
+        );
+        context.SaveChanges();
+        Console.WriteLine($"--> Seeding Courses... Done. Added {context.Courses.Count()} courses.");
     }
 
     private static void SeedTopics(LMSDbContext context)
     {
-        var topics = new[]
+        if (context.Topics.Any())
         {
+            Console.WriteLine($"--> Topics already exist ({context.Topics.Count()}). Skipping.");
+            return;
+        }
+
+        Console.WriteLine("--> Seeding Topics...");
+        context.Topics.AddRange(
             new Topic { Name = "Variables & Data Types" },
             new Topic { Name = "Control Flow" },
             new Topic { Name = "Object-Oriented Programming" },
@@ -140,14 +181,21 @@ public static class DbInitializer
             new Topic { Name = "Sorting Algorithms" },
             new Topic { Name = "HTML & CSS Basics" },
             new Topic { Name = "ASP.NET Core MVC" }
-        };
-        context.Topics.AddRange(topics);
+        );
+        context.SaveChanges();
+        Console.WriteLine($"--> Seeding Topics... Done. Added {context.Topics.Count()} topics.");
     }
 
     private static void SeedFaqs(LMSDbContext context)
     {
-        var faqs = new[]
+        if (context.FAQs.Any())
         {
+            Console.WriteLine($"--> FAQs already exist ({context.FAQs.Count()}). Skipping.");
+            return;
+        }
+
+        Console.WriteLine("--> Seeding FAQs...");
+        context.FAQs.AddRange(
             new FAQ
             {
                 Question = "How do I reset my password?",
@@ -163,7 +211,8 @@ public static class DbInitializer
                 Question = "Can I submit homework after the deadline?",
                 Answer = "No, homework submissions after the deadline are not accepted."
             }
-        };
-        context.FAQs.AddRange(faqs);
+        );
+        context.SaveChanges();
+        Console.WriteLine($"--> Seeding FAQs... Done. Added {context.FAQs.Count()} FAQs.");
     }
 }

@@ -1,4 +1,4 @@
-using System.Text;
+﻿using System.Text;
 using System.Text.Json.Serialization;
 using LMS.API.Data;
 using LMS.API.Repositories.Implementations;
@@ -63,7 +63,14 @@ namespace LMS.API
             // DbContext
             builder.Services.AddDbContext<LMSDbContext>(options =>
                 options.UseSqlServer(
-                    builder.Configuration.GetConnectionString("DefaultConnection")));
+                    builder.Configuration.GetConnectionString("DefaultConnection"), sqlServerOptionsAction: sqlOptions =>
+                    {
+                        sqlOptions.EnableRetryOnFailure(
+                            maxRetryCount: 5,
+                            maxRetryDelay: TimeSpan.FromSeconds(30),
+                            errorNumbersToAdd: null
+                            );
+                    }));
 
             // JWT Authentication
             var jwtSettings = builder.Configuration.GetSection("Jwt");
@@ -78,12 +85,10 @@ namespace LMS.API
             {
                 options.TokenValidationParameters = new TokenValidationParameters
                 {
-                    ValidateIssuer = true,
-                    ValidateAudience = true,
+                    ValidateIssuer = false,
+                    ValidateAudience = false,
                     ValidateLifetime = true,
                     ValidateIssuerSigningKey = true,
-                    ValidIssuer = jwtSettings["Issuer"],
-                    ValidAudience = jwtSettings["Audience"],
                     IssuerSigningKey = new SymmetricSecurityKey(
                         Encoding.UTF8.GetBytes(secretKey)),
                     ClockSkew = TimeSpan.Zero
@@ -134,6 +139,8 @@ namespace LMS.API
             builder.Services.AddScoped<IStudentTaskService, StudentTaskService>();
             builder.Services.AddScoped<IInstructorTaskService, InstructorTaskService>();
             builder.Services.AddScoped<ICourseService, CourseService>();
+            builder.Services.AddScoped<IDashboardService, DashboardService>();
+            builder.Services.AddScoped<IAdminService, AdminService>();
 
             builder.Services.AddCors(options =>
             {
@@ -147,17 +154,39 @@ namespace LMS.API
 
             var app = builder.Build();
 
-            //using (var scope = app.Services.CreateScope())
-            //{
-            //    var context = scope.ServiceProvider.GetRequiredService<LMSDbContext>();
-            //    DbInitializer.Initialize(context);
-            //}
 
-            
-                app.UseSwagger();
-                app.UseSwaggerUI();
-            
-            
+            if (app.Environment.IsDevelopment())
+            {
+
+                using (var scope = app.Services.CreateScope())
+                {
+                    var services = scope.ServiceProvider;
+                    try
+                    {
+                        Console.WriteLine("--> Attempting to migrate and seed database...");
+                        var context = services.GetRequiredService<LMSDbContext>();
+
+                        context.Database.Migrate();
+
+                        DbInitializer.Initialize(context);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"--> CRITICAL ERROR during startup/seeding: {ex.Message}");
+                        if (ex.InnerException != null)
+                        {
+                            Console.WriteLine($"--> Inner Exception: {ex.InnerException.Message}");
+                        }
+                    }
+                }
+
+            }
+
+
+
+            app.UseSwagger();
+            app.UseSwaggerUI();            
+
 
             app.UseRouting();
 
