@@ -16,3 +16,13 @@ obj/
 
 # OpenCode
 .opencode/
+
+# Publish output
+publish/
+
+# Secrets & production config (never commit)
+appsettings.Production.json
+appsettings.*.Local.json
+
+# macOS
+.DS_Store

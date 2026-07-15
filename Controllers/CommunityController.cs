@@ -35,7 +35,8 @@ public class CommunityController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> CreatePost([FromBody] string content)
     {
-        var userId = GetUserId();
+        if (!int.TryParse(User.FindFirstValue("UserId"), out var userId))
+            return Unauthorized(new { message = "User not authenticated" });
         var created = await _service.CreateAsync(userId, content);
         return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
     }
@@ -44,7 +45,8 @@ public class CommunityController : ControllerBase
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeletePost(int id)
     {
-        var userId = GetUserId();
+        if (!int.TryParse(User.FindFirstValue("UserId"), out var userId))
+            return Unauthorized(new { message = "User not authenticated" });
         var isAdmin = User.IsInRole("Admin");
 
         var post = await _service.GetByIdAsync(id);
@@ -56,6 +58,4 @@ public class CommunityController : ControllerBase
         if (!result) return NotFound();
         return NoContent();
     }
-
-    private int GetUserId() => int.Parse(User.FindFirstValue("UserId")!);
 }

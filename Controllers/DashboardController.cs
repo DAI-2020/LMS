@@ -20,7 +20,8 @@ public class DashboardController : ControllerBase
     [HttpGet("tasks-summary")]
     public async Task<IActionResult> GetTasksSummary()
     {
-        var userId = GetUserId();
+        var errorResult = GetUserId(out var userId);
+        if (errorResult != null) return errorResult;
         var result = await _dashboardService.GetTasksSummaryAsync(userId);
         return Ok(result);
     }
@@ -28,7 +29,8 @@ public class DashboardController : ControllerBase
     [HttpGet("attendance-summary")]
     public async Task<IActionResult> GetAttendanceSummary()
     {
-        var userId = GetUserId();
+        var errorResult = GetUserId(out var userId);
+        if (errorResult != null) return errorResult;
         var result = await _dashboardService.GetAttendanceSummaryAsync(userId);
         return Ok(result);
     }
@@ -43,16 +45,16 @@ public class DashboardController : ControllerBase
     [HttpGet("growth-areas")]
     public async Task<IActionResult> GetGrowthAreas()
     {
-        var userId = GetUserId();
+        var errorResult = GetUserId(out var userId);
+        if (errorResult != null) return errorResult;
         var result = await _dashboardService.GetGrowthAreasAsync(userId);
         return Ok(result);
     }
 
-    private int GetUserId()
+    private IActionResult GetUserId(out int userId)
     {
-        var claim = User.FindFirstValue("UserId");
-        if (claim == null || !int.TryParse(claim, out var id))
-            throw new UnauthorizedAccessException("User ID claim not found.");
-        return id;
+        if (!int.TryParse(User.FindFirstValue("UserId"), out userId))
+            return Unauthorized(new { message = "User not authenticated" });
+        return null!;
     }
 }

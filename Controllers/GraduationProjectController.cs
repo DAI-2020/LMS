@@ -31,7 +31,9 @@ public class GraduationProjectController : ControllerBase
     {
         try
         {
-            dto.StudentId = GetUserId();
+            var errorResult = GetUserId(out var userId);
+            if (errorResult != null) return errorResult;
+            dto.StudentId = userId;
             var result = await _service.SubmitProjectAsync(dto);
             if (result is null)
                 return BadRequest(new { message = "Already submitted" });
@@ -48,7 +50,8 @@ public class GraduationProjectController : ControllerBase
     [HttpGet("my-submission")]
     public async Task<IActionResult> GetMySubmissionStatus()
     {
-        var userId = GetUserId();
+        var errorResult = GetUserId(out var userId);
+        if (errorResult != null) return errorResult;
         var result = await _service.GetByStudentIdAsync(userId);
         return Ok(result);
     }
@@ -95,11 +98,10 @@ public class GraduationProjectController : ControllerBase
         return NoContent();
     }
 
-    private int GetUserId()
+    private IActionResult GetUserId(out int userId)
     {
-        var claim = User.FindFirstValue("UserId");
-        if (claim == null || !int.TryParse(claim, out var id))
-            throw new UnauthorizedAccessException("User ID claim not found.");
-        return id;
+        if (!int.TryParse(User.FindFirstValue("UserId"), out userId))
+            return Unauthorized(new { message = "User not authenticated" });
+        return null!;
     }
 }

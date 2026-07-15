@@ -36,9 +36,10 @@ public class AuthController : ControllerBase
 
             return Ok(result.Response);
         }
-        catch (Exception)
+        catch (Exception ex)
         {
-            return StatusCode(500, new { message = "An error occurred during login" });
+            var detail = ex.InnerException?.Message ?? ex.Message;
+            return StatusCode(500, new { message = "An error occurred during login", detail });
         }
     }
 
@@ -53,9 +54,10 @@ public class AuthController : ControllerBase
 
             return Created("", result);
         }
-        catch (Exception)
+        catch (Exception ex)
         {
-            return StatusCode(500, new { message = "An error occurred during registration" });
+            var detail = ex.InnerException?.Message ?? ex.Message;
+            return StatusCode(500, new { message = "An error occurred during registration", detail });
         }
     }
 
@@ -79,9 +81,8 @@ public class AuthController : ControllerBase
     [HttpPost("change-password")]
     public async Task<IActionResult> ChangePassword([FromBody] ChangePasswordDto dto)
     {
-        var claim = User.FindFirstValue("UserId");
-        if (claim == null || !int.TryParse(claim, out var userId))
-            throw new UnauthorizedAccessException("User ID claim not found.");
+        if (!int.TryParse(User.FindFirstValue("UserId"), out var userId))
+            return Unauthorized(new { message = "User not authenticated" });
         var result = await _profileService.ChangePasswordAsync(userId, dto.OldPassword, dto.NewPassword);
         if (!result) return BadRequest(new { message = "Old password is incorrect" });
         return Ok(new { message = "Password changed successfully" });

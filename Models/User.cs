@@ -41,4 +41,6 @@ public class User
     public ICollection<GraduationProjectSubmission> GraduationProjectSubmissions { get; set; } = new List<GraduationProjectSubmission>();
 
     public ICollection<Quiz> Quizzes { get; set; } = new List<Quiz>();
+
+    public ICollection<CommunityPost> CommunityPosts { get; set; } = new List<CommunityPost>();
 }

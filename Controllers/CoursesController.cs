@@ -28,7 +28,8 @@ public class CoursesController : ControllerBase
     [HttpGet("my-courses")]
     public async Task<IActionResult> GetMyCourses()
     {
-        var userId = GetUserId();
+        var errorResult = GetUserId(out var userId);
+        if (errorResult != null) return errorResult;
         var roles = User.FindAll(ClaimTypes.Role).Select(c => c.Value);
         var courses = await _service.GetMyCoursesAsync(userId, roles);
         return Ok(courses);
@@ -68,11 +69,10 @@ public class CoursesController : ControllerBase
         return NoContent();
     }
 
-    private int GetUserId()
+    private IActionResult GetUserId(out int userId)
     {
-        var claim = User.FindFirstValue("UserId");
-        if (claim == null || !int.TryParse(claim, out var id))
-            throw new UnauthorizedAccessException("User ID claim not found.");
-        return id;
+        if (!int.TryParse(User.FindFirstValue("UserId"), out userId))
+            return Unauthorized(new { message = "User not authenticated" });
+        return null!;
     }
 }

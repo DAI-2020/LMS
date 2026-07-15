@@ -1,7 +1,9 @@
 ﻿using System.Text;
 using System.Text.Json.Serialization;
 using LMS.API.Data;
+using LMS.API.Enums.User;
 using LMS.API.Middleware;
+using LMS.API.Models;
 using LMS.API.Repositories.Implementations;
 using LMS.API.Repositories.Interfaces;
 using LMS.API.Services.Implementations;
@@ -101,8 +103,12 @@ namespace LMS.API
             // CORS
             builder.Services.AddCors(options =>
             {
-                options.AddPolicy("AllowAll", policy =>
-                    policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+                options.AddPolicy("AllowAllOrigins", policy =>
+                {
+                    policy.AllowAnyOrigin()
+                          .AllowAnyMethod()
+                          .AllowAnyHeader();
+                });
             });
 
             // Repositories
@@ -153,38 +159,37 @@ namespace LMS.API
             builder.Services.AddScoped<ISupportAppService, SupportAppService>();
             builder.Services.AddScoped<IFaqAppService, FaqAppService>();
 
-            builder.Services.AddCors(options =>
-            {
-                options.AddPolicy("AllowAllOrigins", policy =>
-                {
-                    policy.AllowAnyOrigin()
-                          .AllowAnyMethod()
-                          .AllowAnyHeader();
-                });
-            });
-
             var app = builder.Build();
 
+            // Apply pending migrations automatically on startup
+            try
+            {
+                using (var scope = app.Services.CreateScope())
+                {
+                    var context = scope.ServiceProvider.GetRequiredService<LMSDbContext>();
+                    context.Database.Migrate();
+                    Console.WriteLine("--> Migrations applied successfully.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"--> Migration FAILED: {ex.Message}");
+                if (ex.InnerException != null)
+                    Console.WriteLine($"--> Inner exception: {ex.InnerException.Message}");
+                if (ex.InnerException?.InnerException != null)
+                    Console.WriteLine($"--> Deep inner exception: {ex.InnerException.InnerException.Message}");
+            }
 
-            
             app.UseSwagger();
             app.UseSwaggerUI();
-            
-
-
-
-                       
-
 
             app.UseRouting();
-
             app.UseCors("AllowAllOrigins");
 
             if (!app.Environment.IsEnvironment("Testing"))
                 app.UseHttpsRedirection();
 
             app.UseStaticFiles();
-            app.UseCors("AllowAll");
             app.UseMiddleware<GlobalExceptionHandlerMiddleware>();
             app.UseAuthentication();
             app.UseAuthorization();

@@ -41,6 +41,7 @@ public class LMSDbContext : DbContext
     // Person A - Quizzes & Topics
     public DbSet<Quiz> Quizzes { get; set; }
     public DbSet<Topic> Topics { get; set; }
+    public DbSet<CommunityPost> CommunityPosts { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

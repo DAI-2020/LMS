@@ -21,7 +21,8 @@ public class AiAssistantController : ControllerBase
     [HttpPost("chat")]
     public async Task<IActionResult> GeneralChat([FromBody] AiChatRequestDto dto)
     {
-        var userId = GetUserId();
+        var errorResult = GetUserId(out var userId);
+        if (errorResult != null) return errorResult;
         try
         {
             dto.StudentId = userId;
@@ -38,7 +39,8 @@ public class AiAssistantController : ControllerBase
     [HttpPost("help-me-writing")]
     public async Task<IActionResult> HelpMeWriting([FromBody] HelpMeWritingDto dto)
     {
-        var userId = GetUserId();
+        var errorResult = GetUserId(out var userId);
+        if (errorResult != null) return errorResult;
         try
         {
             var result = await _service.HelpMeWritingAsync(userId, dto.CourseId, dto.Text);
@@ -54,7 +56,8 @@ public class AiAssistantController : ControllerBase
     [HttpPost("study-plan")]
     public async Task<IActionResult> CreateStudyPlan([FromBody] StudyPlanDto dto)
     {
-        var userId = GetUserId();
+        var errorResult = GetUserId(out var userId);
+        if (errorResult != null) return errorResult;
         try
         {
             var result = await _service.CreateStudyPlanAsync(userId, dto.CourseId, dto.AdditionalInfo);
@@ -70,7 +73,8 @@ public class AiAssistantController : ControllerBase
     [HttpPost("summarize")]
     public async Task<IActionResult> SummarizeLesson([FromBody] SummarizeLessonDto dto)
     {
-        var userId = GetUserId();
+        var errorResult = GetUserId(out var userId);
+        if (errorResult != null) return errorResult;
         try
         {
             var result = await _service.SummarizeLessonAsync(userId, dto.CourseId, dto.LessonContent);
@@ -83,11 +87,10 @@ public class AiAssistantController : ControllerBase
         }
     }
 
-    private int GetUserId()
+    private IActionResult GetUserId(out int userId)
     {
-        var claim = User.FindFirstValue("UserId");
-        if (claim == null || !int.TryParse(claim, out var id))
-            throw new UnauthorizedAccessException("User ID claim not found.");
-        return id;
+        if (!int.TryParse(User.FindFirstValue("UserId"), out userId))
+            return Unauthorized(new { message = "User not authenticated" });
+        return null!;
     }
 }

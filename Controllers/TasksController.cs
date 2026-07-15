@@ -29,7 +29,8 @@ public class TasksController : ControllerBase
     [HttpGet("summary")]
     public async Task<IActionResult> GetTasksSummary([FromQuery] int courseId)
     {
-        var studentId = GetUserId();
+        var errorResult = GetUserId(out var studentId);
+        if (errorResult != null) return errorResult;
         var summary = await _performanceService.GetTasksSummaryAsync(studentId, courseId);
         return Ok(summary);
     }
@@ -54,7 +55,9 @@ public class TasksController : ControllerBase
     [HttpPost("submit")]
     public async Task<IActionResult> SubmitHomework([FromBody] CreateSubmissionDto dto)
     {
-        dto.StudentId = GetUserId();
+        var errorResult = GetUserId(out var userId);
+        if (errorResult != null) return errorResult;
+        dto.StudentId = userId;
         var result = await _studentTaskService.SubmitHomeworkAsync(dto);
         if (result is null)
             return BadRequest(new { message = "Already submitted or task not found" });
@@ -65,7 +68,8 @@ public class TasksController : ControllerBase
     [HttpGet("submissions/my")]
     public async Task<IActionResult> GetMySubmissions()
     {
-        var userId = GetUserId();
+        var errorResult = GetUserId(out var userId);
+        if (errorResult != null) return errorResult;
         var submissions = await _studentTaskService.GetSubmissionsByStudentAsync(userId);
         return Ok(submissions);
     }
@@ -112,11 +116,10 @@ public class TasksController : ControllerBase
         return NoContent();
     }
 
-    private int GetUserId()
+    private IActionResult GetUserId(out int userId)
     {
-        var claim = User.FindFirstValue("UserId");
-        if (claim == null || !int.TryParse(claim, out var id))
-            throw new UnauthorizedAccessException("User ID claim not found.");
-        return id;
+        if (!int.TryParse(User.FindFirstValue("UserId"), out userId))
+            return Unauthorized(new { message = "User not authenticated" });
+        return null!;
     }
 }

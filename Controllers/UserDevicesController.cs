@@ -20,7 +20,8 @@ public class UserDevicesController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> GetMyDevices()
     {
-        var userId = GetUserId();
+        var errorResult = GetUserId(out var userId);
+        if (errorResult != null) return errorResult;
         var tokenHash = GetTokenHash();
         var devices = await _service.GetUserDevicesAsync(userId, tokenHash);
         return Ok(devices);
@@ -29,7 +30,8 @@ public class UserDevicesController : ControllerBase
     [HttpDelete("{id}")]
     public async Task<IActionResult> DisconnectDevice(int id)
     {
-        var userId = GetUserId();
+        var errorResult = GetUserId(out var userId);
+        if (errorResult != null) return errorResult;
         var result = await _service.DisconnectDeviceAsync(userId, id);
         if (!result) return NotFound(new { message = "Device not found" });
         return NoContent();
@@ -38,17 +40,17 @@ public class UserDevicesController : ControllerBase
     [HttpDelete("clear-all")]
     public async Task<IActionResult> ClearAllOtherDevices()
     {
-        var userId = GetUserId();
+        var errorResult = GetUserId(out var userId);
+        if (errorResult != null) return errorResult;
         await _service.DisconnectAllDevicesAsync(userId);
         return NoContent();
     }
 
-    private int GetUserId()
+    private IActionResult GetUserId(out int userId)
     {
-        var claim = User.FindFirstValue("UserId");
-        if (claim == null || !int.TryParse(claim, out var id))
-            throw new UnauthorizedAccessException("User ID claim not found.");
-        return id;
+        if (!int.TryParse(User.FindFirstValue("UserId"), out userId))
+            return Unauthorized(new { message = "User not authenticated" });
+        return null!;
     }
 
     private string GetTokenHash() =>

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace LMS.API.Migrations
 {
     /// <inheritdoc />
-    public partial class final : Migration
+    public partial class Migrations : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -177,8 +177,7 @@ namespace LMS.API.Migrations
                     Priority = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    UserId = table.Column<int>(type: "int", nullable: true)
+                    UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -189,11 +188,6 @@ namespace LMS.API.Migrations
                         principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Tickets_Users_UserId",
-                        column: x => x.UserId,
-                        principalTable: "Users",
-                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -286,7 +280,8 @@ namespace LMS.API.Migrations
                     WeekNumber = table.Column<int>(type: "int", nullable: false),
                     Type = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Mode = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    RecordingUrl = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    RecordingUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    InstructorId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -295,6 +290,12 @@ namespace LMS.API.Migrations
                         name: "FK_LiveSessions_Courses_CourseId",
                         column: x => x.CourseId,
                         principalTable: "Courses",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_LiveSessions_Users_InstructorId",
+                        column: x => x.InstructorId,
+                        principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -375,8 +376,7 @@ namespace LMS.API.Migrations
                     MicrophoneUsageSeconds = table.Column<int>(type: "int", nullable: false),
                     ParticipationLevel = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    EngagementScore = table.Column<int>(type: "int", nullable: false),
-                    UserId = table.Column<int>(type: "int", nullable: true)
+                    EngagementScore = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -393,11 +393,6 @@ namespace LMS.API.Migrations
                         principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_AttendanceLogs_Users_UserId",
-                        column: x => x.UserId,
-                        principalTable: "Users",
-                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -442,8 +437,7 @@ namespace LMS.API.Migrations
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     MaterialType = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     AttachmentType = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    FileUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    LiveSessionId = table.Column<int>(type: "int", nullable: true)
+                    FileUrl = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -454,11 +448,6 @@ namespace LMS.API.Migrations
                         principalTable: "Courses",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Materials_LiveSessions_LiveSessionId",
-                        column: x => x.LiveSessionId,
-                        principalTable: "LiveSessions",
-                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Materials_LiveSessions_SessionId",
                         column: x => x.SessionId,
@@ -518,11 +507,6 @@ namespace LMS.API.Migrations
                 column: "StudentId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_AttendanceLogs_UserId",
-                table: "AttendanceLogs",
-                column: "UserId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_CommunityPosts_UserId",
                 table: "CommunityPosts",
                 column: "UserId");
@@ -553,14 +537,14 @@ namespace LMS.API.Migrations
                 column: "CourseId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_LiveSessions_InstructorId",
+                table: "LiveSessions",
+                column: "InstructorId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Materials_CourseId",
                 table: "Materials",
                 column: "CourseId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Materials_LiveSessionId",
-                table: "Materials",
-                column: "LiveSessionId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Materials_SessionId",
@@ -611,11 +595,6 @@ namespace LMS.API.Migrations
                 name: "IX_Tickets_StudentId",
                 table: "Tickets",
                 column: "StudentId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Tickets_UserId",
-                table: "Tickets",
-                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_user_devices_UserId",

@@ -21,7 +21,8 @@ public class SupportAppController : ControllerBase
     [HttpGet("landing-info")]
     public async Task<IActionResult> GetLandingInfo()
     {
-        var userId = GetUserId();
+        var errorResult = GetUserId(out var userId);
+        if (errorResult != null) return errorResult;
         var result = await _service.GetLandingInfoAsync(userId);
         return Ok(result);
     }
@@ -46,7 +47,8 @@ public class SupportAppController : ControllerBase
     {
         try
         {
-            var userId = GetUserId();
+            var errorResult = GetUserId(out var userId);
+            if (errorResult != null) return errorResult;
             var result = await _service.SubmitTicketAsync(userId, dto);
             if (result is null) return BadRequest(new { message = "Could not submit ticket" });
             return Ok(result);
@@ -61,16 +63,16 @@ public class SupportAppController : ControllerBase
     [HttpGet("my-tickets")]
     public async Task<IActionResult> GetMyTickets()
     {
-        var userId = GetUserId();
+        var errorResult = GetUserId(out var userId);
+        if (errorResult != null) return errorResult;
         var result = await _service.GetMyTicketsAsync(userId);
         return Ok(result);
     }
 
-    private int GetUserId()
+    private IActionResult GetUserId(out int userId)
     {
-        var claim = User.FindFirstValue("UserId");
-        if (claim == null || !int.TryParse(claim, out var id))
-            throw new UnauthorizedAccessException("User ID claim not found.");
-        return id;
+        if (!int.TryParse(User.FindFirstValue("UserId"), out userId))
+            return Unauthorized(new { message = "User not authenticated" });
+        return null!;
     }
 }

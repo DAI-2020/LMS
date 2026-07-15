@@ -90,16 +90,11 @@ namespace LMS.API.Migrations
                     b.Property<int>("StudentId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("UserId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("SessionId");
 
                     b.HasIndex("StudentId");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("AttendanceLogs");
                 });
@@ -285,6 +280,9 @@ namespace LMS.API.Migrations
                     b.Property<int>("DurationMinutes")
                         .HasColumnType("int");
 
+                    b.Property<int>("InstructorId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Mode")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -315,6 +313,8 @@ namespace LMS.API.Migrations
 
                     b.HasIndex("CourseId");
 
+                    b.HasIndex("InstructorId");
+
                     b.ToTable("LiveSessions");
                 });
 
@@ -337,9 +337,6 @@ namespace LMS.API.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("LiveSessionId")
-                        .HasColumnType("int");
-
                     b.Property<string>("MaterialType")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -354,8 +351,6 @@ namespace LMS.API.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CourseId");
-
-                    b.HasIndex("LiveSessionId");
 
                     b.HasIndex("SessionId");
 
@@ -546,14 +541,9 @@ namespace LMS.API.Migrations
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("UserId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("StudentId");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Tickets");
                 });
@@ -733,14 +723,10 @@ namespace LMS.API.Migrations
                         .IsRequired();
 
                     b.HasOne("LMS.API.Models.User", "Student")
-                        .WithMany()
+                        .WithMany("AttendanceLogs")
                         .HasForeignKey("StudentId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
-
-                    b.HasOne("LMS.API.Models.User", null)
-                        .WithMany("AttendanceLogs")
-                        .HasForeignKey("UserId");
 
                     b.Navigation("LiveSession");
 
@@ -806,7 +792,15 @@ namespace LMS.API.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("LMS.API.Models.User", "Instructor")
+                        .WithMany()
+                        .HasForeignKey("InstructorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Course");
+
+                    b.Navigation("Instructor");
                 });
 
             modelBuilder.Entity("LMS.API.Models.Material", b =>
@@ -817,12 +811,8 @@ namespace LMS.API.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("LMS.API.Models.LiveSession", null)
-                        .WithMany("Materials")
-                        .HasForeignKey("LiveSessionId");
-
                     b.HasOne("LMS.API.Models.LiveSession", "LiveSession")
-                        .WithMany()
+                        .WithMany("Materials")
                         .HasForeignKey("SessionId")
                         .OnDelete(DeleteBehavior.NoAction);
 
@@ -891,14 +881,10 @@ namespace LMS.API.Migrations
             modelBuilder.Entity("LMS.API.Models.Ticket", b =>
                 {
                     b.HasOne("LMS.API.Models.User", "Student")
-                        .WithMany()
+                        .WithMany("Tickets")
                         .HasForeignKey("StudentId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
-
-                    b.HasOne("LMS.API.Models.User", null)
-                        .WithMany("Tickets")
-                        .HasForeignKey("UserId");
 
                     b.Navigation("Student");
                 });

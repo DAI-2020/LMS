@@ -21,7 +21,8 @@ public class NotificationPreferencesController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> GetMyPreferences()
     {
-        var userId = GetUserId();
+        var errorResult = GetUserId(out var userId);
+        if (errorResult != null) return errorResult;
         var prefs = await _service.GetByUserIdAsync(userId);
         if (prefs is null) return NotFound();
         return Ok(prefs);
@@ -30,17 +31,17 @@ public class NotificationPreferencesController : ControllerBase
     [HttpPut]
     public async Task<IActionResult> UpdatePreferences([FromBody] UpdateNotificationPreferencesDto dto)
     {
-        var userId = GetUserId();
+        var errorResult = GetUserId(out var userId);
+        if (errorResult != null) return errorResult;
         var result = await _service.UpdateAsync(userId, dto);
         if (result is null) return NotFound();
         return Ok(result);
     }
 
-    private int GetUserId()
+    private IActionResult GetUserId(out int userId)
     {
-        var claim = User.FindFirstValue("UserId");
-        if (claim == null || !int.TryParse(claim, out var id))
-            throw new UnauthorizedAccessException("User ID claim not found.");
-        return id;
+        if (!int.TryParse(User.FindFirstValue("UserId"), out userId))
+            return Unauthorized(new { message = "User not authenticated" });
+        return null!;
     }
 }

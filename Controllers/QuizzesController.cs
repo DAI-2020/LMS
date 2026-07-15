@@ -32,7 +32,8 @@ public class QuizzesController : ControllerBase
     [HttpGet("growth-areas")]
     public async Task<IActionResult> GetGrowthAreas([FromQuery] int courseId)
     {
-        var studentId = GetUserId();
+        var errorResult = GetUserId(out var studentId);
+        if (errorResult != null) return errorResult;
         var result = await _performanceService.GetGrowthAreasAsync(studentId, courseId);
         return Ok(result);
     }
@@ -62,7 +63,9 @@ public class QuizzesController : ControllerBase
     [HttpPost("submit")]
     public async Task<IActionResult> SubmitQuizAnswers([FromBody] CreateQuizDto dto)
     {
-        dto.StudentId = GetUserId();
+        var errorResult = GetUserId(out var userId);
+        if (errorResult != null) return errorResult;
+        dto.StudentId = userId;
         var created = await _quizService.CreateAsync(dto);
         return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
     }
@@ -100,11 +103,10 @@ public class QuizzesController : ControllerBase
         return NoContent();
     }
 
-    private int GetUserId()
+    private IActionResult GetUserId(out int userId)
     {
-        var claim = User.FindFirstValue("UserId");
-        if (claim == null || !int.TryParse(claim, out var id))
-            throw new UnauthorizedAccessException("User ID claim not found.");
-        return id;
+        if (!int.TryParse(User.FindFirstValue("UserId"), out userId))
+            return Unauthorized(new { message = "User not authenticated" });
+        return null!;
     }
 }

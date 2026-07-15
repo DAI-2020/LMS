@@ -21,7 +21,8 @@ public class AssignmentController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> GetAssignments([FromQuery] AssignmentFilterDto filter)
     {
-        var userId = GetUserId();
+        var errorResult = GetUserId(out var userId);
+        if (errorResult != null) return errorResult;
         var result = await _service.GetAssignmentsAsync(userId, filter);
         return Ok(result);
     }
@@ -29,7 +30,8 @@ public class AssignmentController : ControllerBase
     [HttpGet("{id}")]
     public async Task<IActionResult> GetAssignmentDetails(int id)
     {
-        var userId = GetUserId();
+        var errorResult = GetUserId(out var userId);
+        if (errorResult != null) return errorResult;
         var result = await _service.GetAssignmentDetailsAsync(id, userId);
         if (result is null) return NotFound();
         return Ok(result);
@@ -40,7 +42,8 @@ public class AssignmentController : ControllerBase
     {
         try
         {
-            var userId = GetUserId();
+            var errorResult = GetUserId(out var userId);
+            if (errorResult != null) return errorResult;
             var result = await _service.SubmitAssignmentAsync(userId, dto);
             if (!result) return BadRequest(new { message = "Could not submit assignment" });
             return Ok(new { message = "Assignment submitted successfully" });
@@ -51,11 +54,10 @@ public class AssignmentController : ControllerBase
         }
     }
 
-    private int GetUserId()
+    private IActionResult GetUserId(out int userId)
     {
-        var claim = User.FindFirstValue("UserId");
-        if (claim == null || !int.TryParse(claim, out var id))
-            throw new UnauthorizedAccessException("User ID claim not found.");
-        return id;
+        if (!int.TryParse(User.FindFirstValue("UserId"), out userId))
+            return Unauthorized(new { message = "User not authenticated" });
+        return null!;
     }
 }

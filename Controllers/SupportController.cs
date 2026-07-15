@@ -67,7 +67,9 @@ public class SupportController : ControllerBase
     {
         try
         {
-            dto.StudentId = GetUserId();
+            var errorResult = GetUserId(out var userId);
+            if (errorResult != null) return errorResult;
+            dto.StudentId = userId;
             var created = await _ticketService.CreateAsync(dto);
             return CreatedAtAction(nameof(GetTicketById), new { id = created.Id }, created);
         }
@@ -85,7 +87,8 @@ public class SupportController : ControllerBase
     [HttpGet("tickets/my")]
     public async Task<IActionResult> GetMyTickets()
     {
-        var userId = GetUserId();
+        var errorResult = GetUserId(out var userId);
+        if (errorResult != null) return errorResult;
         var tickets = await _ticketService.GetMyTicketsAsync(userId);
         return Ok(tickets);
     }
@@ -112,7 +115,8 @@ public class SupportController : ControllerBase
     [HttpPost("tickets/{id}/reply")]
     public async Task<IActionResult> AddReply(int id, [FromBody] string message)
     {
-        var userId = GetUserId();
+        var errorResult = GetUserId(out var userId);
+        if (errorResult != null) return errorResult;
         var reply = await _ticketService.AddReplyAsync(id, userId, message);
         return Ok(reply);
     }
@@ -138,11 +142,10 @@ public class SupportController : ControllerBase
         return Ok(result);
     }
 
-    private int GetUserId()
+    private IActionResult GetUserId(out int userId)
     {
-        var claim = User.FindFirstValue("UserId");
-        if (claim == null || !int.TryParse(claim, out var id))
-            throw new UnauthorizedAccessException("User ID claim not found.");
-        return id;
+        if (!int.TryParse(User.FindFirstValue("UserId"), out userId))
+            return Unauthorized(new { message = "User not authenticated" });
+        return null!;
     }
 }

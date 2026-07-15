@@ -21,7 +21,8 @@ public class AccountDetailsController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> GetDetails()
     {
-        var userId = GetUserId();
+        var errorResult = GetUserId(out var userId);
+        if (errorResult != null) return errorResult;
         var result = await _service.GetDetailsAsync(userId);
         if (result is null) return NotFound();
         return Ok(result);
@@ -30,7 +31,8 @@ public class AccountDetailsController : ControllerBase
     [HttpGet("edit-devices")]
     public async Task<IActionResult> GetEditDevices()
     {
-        var userId = GetUserId();
+        var errorResult = GetUserId(out var userId);
+        if (errorResult != null) return errorResult;
         var tokenHash = GetTokenHash();
         var result = await _service.GetDevicesAsync(userId, tokenHash);
         return Ok(result);
@@ -41,7 +43,8 @@ public class AccountDetailsController : ControllerBase
     {
         try
         {
-            var userId = GetUserId();
+            var errorResult = GetUserId(out var userId);
+            if (errorResult != null) return errorResult;
             var result = await _service.UpdateDetailsAsync(userId, dto);
             if (!result) return BadRequest(new { message = "Could not update details" });
             return Ok(new { message = "Account details updated" });
@@ -55,18 +58,18 @@ public class AccountDetailsController : ControllerBase
     [HttpDelete("disconnect-device/{sessionId}")]
     public async Task<IActionResult> DisconnectDevice(int sessionId)
     {
-        var userId = GetUserId();
+        var errorResult = GetUserId(out var userId);
+        if (errorResult != null) return errorResult;
         var result = await _service.DisconnectDeviceAsync(userId, sessionId);
         if (!result) return NotFound();
         return NoContent();
     }
 
-    private int GetUserId()
+    private IActionResult GetUserId(out int userId)
     {
-        var claim = User.FindFirstValue("UserId");
-        if (claim == null || !int.TryParse(claim, out var id))
-            throw new UnauthorizedAccessException("User ID claim not found.");
-        return id;
+        if (!int.TryParse(User.FindFirstValue("UserId"), out userId))
+            return Unauthorized(new { message = "User not authenticated" });
+        return null!;
     }
     private string GetTokenHash() =>
         User.FindFirstValue(System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Jti) ?? string.Empty;

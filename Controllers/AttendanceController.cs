@@ -51,7 +51,9 @@ public class AttendanceController : ControllerBase
     [HttpPost("join")]
     public async Task<IActionResult> JoinSession([FromBody] JoinSessionDto dto)
     {
-        dto.StudentId = GetUserId();
+        var errorResult = GetUserId(out var userId);
+        if (errorResult != null) return errorResult;
+        dto.StudentId = userId;
         var result = await _attendanceService.JoinSessionAsync(dto);
         if (!result) return BadRequest(new { message = "Already joined or session not found" });
         return Ok(new { message = "Joined successfully" });
@@ -61,7 +63,9 @@ public class AttendanceController : ControllerBase
     [HttpPost("leave")]
     public async Task<IActionResult> LeaveSession([FromBody] LeaveSessionDto dto)
     {
-        dto.StudentId = GetUserId();
+        var errorResult = GetUserId(out var userId);
+        if (errorResult != null) return errorResult;
+        dto.StudentId = userId;
         var result = await _attendanceService.LeaveSessionAsync(dto);
         if (!result) return BadRequest(new { message = "Not joined or already left" });
         return Ok(new { message = "Left successfully" });
@@ -84,11 +88,10 @@ public class AttendanceController : ControllerBase
         return Ok(logs);
     }
 
-    private int GetUserId()
+    private IActionResult GetUserId(out int userId)
     {
-        var claim = User.FindFirstValue("UserId");
-        if (claim == null || !int.TryParse(claim, out var id))
-            throw new UnauthorizedAccessException("User ID claim not found.");
-        return id;
+        if (!int.TryParse(User.FindFirstValue("UserId"), out userId))
+            return Unauthorized(new { message = "User not authenticated" });
+        return null!;
     }
 }
