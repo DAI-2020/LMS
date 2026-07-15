@@ -21,8 +21,17 @@
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="uploads\" />
-    <Folder Include="wwwroot\" />
     <Folder Include="wwwroot\uploads\submissions\" />
   </ItemGroup>
+
+  <Target Name="CopyNativeDllsToRoot" AfterTargets="Publish">
+    <Copy SourceFiles="$(PublishDir)runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll"
+          DestinationFiles="$(PublishDir)Microsoft.Data.SqlClient.dll"
+          SkipUnchangedFiles="false" />
+    <Copy SourceFiles="$(PublishDir)runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll"
+          DestinationFiles="$(PublishDir)Microsoft.Data.SqlClient.SNI.dll"
+          SkipUnchangedFiles="false" />
+    <RemoveDir Directories="$(PublishDir)runtimes" />
+  </Target>
 
 </Project>

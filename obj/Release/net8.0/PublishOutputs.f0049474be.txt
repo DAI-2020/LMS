@@ -1,6 +1,7 @@
 C:\Users\nasrat\OneDrive\Desktop\College\LMS\obj\Release\net8.0\PubTmp\Out\LMS.API.exe
 C:\Users\nasrat\OneDrive\Desktop\College\LMS\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
 C:\Users\nasrat\OneDrive\Desktop\College\LMS\obj\Release\net8.0\PubTmp\Out\appsettings.json
+C:\Users\nasrat\OneDrive\Desktop\College\LMS\obj\Release\net8.0\PubTmp\Out\appsettings.Production.json
 C:\Users\nasrat\OneDrive\Desktop\College\LMS\obj\Release\net8.0\PubTmp\Out\LMS.API.dll
 C:\Users\nasrat\OneDrive\Desktop\College\LMS\obj\Release\net8.0\PubTmp\Out\LMS.API.runtimeconfig.json
 C:\Users\nasrat\OneDrive\Desktop\College\LMS\obj\Release\net8.0\PubTmp\Out\LMS.API.pdb

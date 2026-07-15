@@ -147,4 +147,5 @@ C:\Users\nasrat\OneDrive\Desktop\College\LMS\obj\Debug\net8.0\refint\LMS.API.dll
 C:\Users\nasrat\OneDrive\Desktop\College\LMS\obj\Debug\net8.0\LMS.API.pdb
 C:\Users\nasrat\OneDrive\Desktop\College\LMS\obj\Debug\net8.0\LMS.API.genruntimeconfig.cache
 C:\Users\nasrat\OneDrive\Desktop\College\LMS\obj\Debug\net8.0\ref\LMS.API.dll
+C:\Users\nasrat\OneDrive\Desktop\College\LMS\bin\Debug\net8.0\appsettings.Production.json
 C:\Users\nasrat\OneDrive\Desktop\College\LMS\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

@@ -155,37 +155,14 @@ namespace LMS.API
             var app = builder.Build();
 
 
-            if (app.Environment.IsDevelopment())
-            {
-
-                using (var scope = app.Services.CreateScope())
-                {
-                    var services = scope.ServiceProvider;
-                    try
-                    {
-                        Console.WriteLine("--> Attempting to migrate and seed database...");
-                        var context = services.GetRequiredService<LMSDbContext>();
-
-                        context.Database.Migrate();
-
-                        DbInitializer.Initialize(context);
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine($"--> CRITICAL ERROR during startup/seeding: {ex.Message}");
-                        if (ex.InnerException != null)
-                        {
-                            Console.WriteLine($"--> Inner Exception: {ex.InnerException.Message}");
-                        }
-                    }
-                }
-
-            }
-
-
-
+            
             app.UseSwagger();
-            app.UseSwaggerUI();            
+            app.UseSwaggerUI();
+            
+
+
+
+                       
 
 
             app.UseRouting();
