@@ -69,7 +69,7 @@ namespace LMS.API.Repositories.Implementations
                 .Include(ls => ls.Course)
                 .Include(ls => ls.AttendanceLogs)
                 .Include(ls => ls.Materials)
-                .Where(ls => ls.Status == LiveSessionStatus.Upcoming || ls.Status == LiveSessionStatus.Live)
+                .Where(ls => ls.Status == LiveSessionStatus.Scheduled || ls.Status == LiveSessionStatus.Live)
                 .OrderBy(ls => ls.WeekNumber)        
                 .ThenBy(ls => ls.ScheduledAt)
                 .ToListAsync();

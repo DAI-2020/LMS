@@ -34,9 +34,12 @@ public class DashboardService : IDashboardService
             .Where(s => s.StudentId == studentId)
             .ToList();
 
-        var totalTasks = allTasks.Count();
-        var completedTasks = studentSubmissions.Count(s => s.AssignmentStatus == AssignmentStatus.Submitted);
-        var reviewedTasks = studentSubmissions.Count(s => s.AssignmentStatus == AssignmentStatus.Reviewed);
+        var totalTasks = allTasks.Count(t =>
+            studentSubmissions.Any(s => s.TaskId == t.Id) ||
+            t.DueDate >= DateTime.UtcNow ||
+            !studentSubmissions.Any(s => s.TaskId == t.Id && s.AssignmentStatus == Enums.TasksEnums.AssignmentStatus.Submitted));
+        var completedTasks = studentSubmissions.Count(s => s.AssignmentStatus == Enums.TasksEnums.AssignmentStatus.Submitted);
+        var reviewedTasks = studentSubmissions.Count(s => s.AssignmentStatus == Enums.TasksEnums.AssignmentStatus.Reviewed);
         var missedTasks = allTasks.Count(t =>
             t.DueDate < DateTime.UtcNow &&
             !studentSubmissions.Any(s => s.TaskId == t.Id));
@@ -91,7 +94,7 @@ public class DashboardService : IDashboardService
         var result = new ActiveSessionsSummaryDto
         {
             LiveNowCount = cards.Count(c => c.Status == "Live"),
-            UpcomingTodayCount = cards.Count(c => c.Status == "TodaySession" || c.Status == "Upcoming"),
+            UpcomingTodayCount = cards.Count(c => c.Status == "Scheduled"),
             TodaySessions = cards
         };
 
@@ -102,18 +105,23 @@ public class DashboardService : IDashboardService
     {
         var allQuizzes = await _unitOfWork.Quizzes.GetAllWithTopicAsync();
 
-        var topicScores = allQuizzes
+        var studentQuizzes = allQuizzes.Where(q => q.StudentId == studentId).ToList();
+
+        if (!studentQuizzes.Any())
+            return Enumerable.Empty<GrowthAreaMetricDto>();
+
+        var studentTopicScores = studentQuizzes
             .GroupBy(q => q.TopicId)
             .Select(g => new
             {
                 TopicId = g.Key,
-                TopicName = g.First().Topic.Name,
-                AverageScore = g.Average(q => q.Score)
+                TopicName = g.First().Topic?.Name ?? "Unknown",
+                StudentAverage = g.Average(q => q.Score)
             })
-            .Where(t => t.AverageScore < 60)
+            .Where(t => t.StudentAverage < 60)
             .ToList();
 
-        if (!topicScores.Any())
+        if (!studentTopicScores.Any())
             return Enumerable.Empty<GrowthAreaMetricDto>();
 
         var allStudentScores = allQuizzes
@@ -128,7 +136,7 @@ public class DashboardService : IDashboardService
 
         var result = new List<GrowthAreaMetricDto>();
 
-        foreach (var topic in topicScores)
+        foreach (var topic in studentTopicScores)
         {
             var topicStudentRankings = allStudentScores
                 .Where(s => s.TopicId == topic.TopicId)
@@ -137,12 +145,12 @@ public class DashboardService : IDashboardService
 
             var studentRank = topicStudentRankings.FindIndex(s => s.StudentId == studentId) + 1;
             var totalStudents = topicStudentRankings.Count;
-            var ordinal = GetOrdinal(studentRank);
+            var ordinal = studentRank > 0 ? GetOrdinal(studentRank) : "Unranked";
 
             result.Add(new GrowthAreaMetricDto
             {
                 Topic = topic.TopicName,
-                Score = Math.Round(topic.AverageScore, 2),
+                Score = Math.Round(topic.StudentAverage, 2),
                 Ranking = $"{ordinal} out of {totalStudents} students"
             });
         }

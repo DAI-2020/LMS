@@ -4,7 +4,6 @@ namespace LMS.API.DTOs.AIAssistantChat;
 
 public class AiChatRequestDto
 {
-    [Required]
     public int StudentId { get; set; }
 
     [Required]
@@ -12,9 +11,9 @@ public class AiChatRequestDto
 
     [Required]
     [MaxLength(5000)]
-    public string Message { get; set; }
+    public string Message { get; set; } = string.Empty;
 
     [Required]
     [MaxLength(50)]
-    public string Feature { get; set; }
+    public string Feature { get; set; } = string.Empty;
 }

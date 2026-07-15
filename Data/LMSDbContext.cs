@@ -32,7 +32,6 @@ public class LMSDbContext : DbContext
     public DbSet<AttendanceLog> AttendanceLogs { get; set; }
     public DbSet<Ticket> Tickets { get; set; }
     public DbSet<TicketReply> TicketReplies { get; set; }
-    public DbSet<CommunityPost> CommunityPosts { get; set; }
     // محتاجين كونفجريشن
     public DbSet<FAQ> FAQs { get; set; }
     public DbSet<UserDevice> UserDevices { get; set; }

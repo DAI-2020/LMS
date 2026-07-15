@@ -34,8 +34,6 @@ public class User
     public ICollection<AttendanceLog> AttendanceLogs { get; set; } = new List<AttendanceLog>();
     public ICollection<Ticket> Tickets { get; set; } = new List<Ticket>();
 
-    public ICollection<CommunityPost> CommunityPosts { get; set; } = new List<CommunityPost>();
-
     public ICollection<UserDevice> UserDevices { get; set; } = new List<UserDevice>();
 
     public ICollection<NotificationPreferences> NotificationPreferences { get; set; } = new List<NotificationPreferences>();

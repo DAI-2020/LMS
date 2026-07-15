@@ -90,6 +90,18 @@ public class GraduationProjectService : IGraduationProjectService
         return true;
     }
 
+    public async Task<ProjectUploadMetadataDto> GetUploadMetadataAsync()
+    {
+        var courses = await _unitOfWork.Courses.GetAllAsync();
+        var users = await _unitOfWork.Users.GetAllAsync();
+
+        return new ProjectUploadMetadataDto
+        {
+            ProjectNames = courses.Select(c => new LookupDto { Id = c.Id, Name = c.Title }).ToList(),
+            ProjectLeads = users.Select(u => new LookupDto { Id = u.Id, Name = u.FullName }).ToList()
+        };
+    }
+
     private static GraduationProjectResponseDto MapToResponse(GraduationProjectSubmission project)
     {
         return new GraduationProjectResponseDto

@@ -70,7 +70,7 @@ namespace LMS.API.Services.Implementations
             var all = await _repository.GetAllAsync();
             var now = DateTime.UtcNow;
             var missed = all.Where(ls =>
-                ls.Status == LiveSessionStatus.Upcoming &&
+                ls.Status == LiveSessionStatus.Scheduled &&
                 ls.ScheduledAt.AddMinutes(ls.DurationMinutes) < now);
             return missed.Select(MapToDto);
         }
@@ -94,7 +94,7 @@ namespace LMS.API.Services.Implementations
                 Title = dto.Title,
                 ScheduledAt = dto.ScheduledAt,
                 DurationMinutes = dto.DurationMinutes,
-                Status = LiveSessionStatus.Upcoming,
+                Status = LiveSessionStatus.Scheduled,
                 Type = type,
                 Mode = mode
             };
@@ -148,13 +148,22 @@ namespace LMS.API.Services.Implementations
                 if (filter.Category.Equals("Completed", StringComparison.OrdinalIgnoreCase))
                     parsedStatus = LiveSessionStatus.Completed;
                 else if (filter.Category.Equals("Missed", StringComparison.OrdinalIgnoreCase))
-                    parsedStatus = LiveSessionStatus.Cancelled;
+                    parsedStatus = LiveSessionStatus.Scheduled;
             }
 
             if (!string.IsNullOrWhiteSpace(filter.Mode) && Enum.TryParse<DeliveryMode>(filter.Mode, true, out var m))
                 parsedMode = m;
 
             var sessions = await _repository.GetFilteredAsync(parsedStatus, null, parsedMode, filter.CourseId, startDate, endDate);
+
+            if (!string.IsNullOrWhiteSpace(filter.Category) &&
+                filter.Category.Equals("Missed", StringComparison.OrdinalIgnoreCase))
+            {
+                var now = DateTime.UtcNow;
+                sessions = sessions.Where(s =>
+                    s.Status == LiveSessionStatus.Scheduled &&
+                    s.ScheduledAt.AddMinutes(s.DurationMinutes) < now);
+            }
 
             if (!string.IsNullOrWhiteSpace(filter.Category) &&
                 filter.Category.Equals("TodaysSession", StringComparison.OrdinalIgnoreCase))
@@ -189,6 +198,9 @@ namespace LMS.API.Services.Implementations
 
         public async Task<PaginatedSessionsResponseDto> GetPaginatedAsync(PaginatedSessionsRequestDto request)
         {
+            var page = Math.Max(1, request.Page);
+            var pageSize = Math.Clamp(request.PageSize, 1, 100);
+
             DeliveryMode? parsedMode = null;
             LiveSessionStatus? parsedStatus = null;
             LiveSessionType? parsedType = null;
@@ -205,22 +217,22 @@ namespace LMS.API.Services.Implementations
             if (!string.IsNullOrWhiteSpace(request.Search))
                 allSessions = allSessions.Where(s =>
                     s.Title.Contains(request.Search, StringComparison.OrdinalIgnoreCase) ||
-                    s.Course.Title.Contains(request.Search, StringComparison.OrdinalIgnoreCase));
+                    (s.Course != null && s.Course.Title != null && s.Course.Title.Contains(request.Search, StringComparison.OrdinalIgnoreCase)));
 
             var list = allSessions.ToList();
             var totalCount = list.Count;
 
             var paged = list
-                .Skip((request.Page - 1) * request.PageSize)
-                .Take(request.PageSize)
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
                 .ToList();
 
             return new PaginatedSessionsResponseDto
             {
                 Items = paged.Select(MapToCardDto).ToList(),
                 TotalCount = totalCount,
-                Page = request.Page,
-                PageSize = request.PageSize
+                Page = page,
+                PageSize = pageSize
             };
         }
 

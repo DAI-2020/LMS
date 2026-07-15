@@ -24,6 +24,15 @@
     <Folder Include="wwwroot\uploads\submissions\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="LMS.API.Tests\**" />
+    <Content Remove="LMS.API.Tests\**" />
+    <None Remove="LMS.API.Tests\**" />
+    <EmbeddedResource Remove="LMS.API.Tests\**" />
+    <Content Update="LMS.API.Tests\**" />
+    <None Update="LMS.API.Tests\**" />
+  </ItemGroup>
+
   <Target Name="CopyNativeDllsToRoot" AfterTargets="Publish">
     <Copy SourceFiles="$(PublishDir)runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll"
           DestinationFiles="$(PublishDir)Microsoft.Data.SqlClient.dll"

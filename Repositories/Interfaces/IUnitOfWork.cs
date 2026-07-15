@@ -16,7 +16,6 @@ public interface IUnitOfWork : IDisposable
     IAttendanceRepository Attendance { get; }
     ITicketRepository Tickets { get; }
     ITicketReplyRepository TicketReplies { get; }
-    ICommunityPostRepository CommunityPosts { get; }
     IFaqRepository Faqs { get; }
     IUserDeviceRepository UserDevices { get; }
     INotificationPreferenceRepository NotificationPreferences { get; }

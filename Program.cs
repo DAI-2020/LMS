@@ -13,7 +13,7 @@ using Microsoft.OpenApi.Models;
 
 namespace LMS.API
 {
-    public class Program
+    public partial class Program
     {
         public static void Main(string[] args)
         {
@@ -118,7 +118,6 @@ namespace LMS.API
             builder.Services.AddScoped<IAttendanceRepository, AttendanceRepository>();
             builder.Services.AddScoped<ITicketRepository, TicketRepository>();
             builder.Services.AddScoped<ITicketReplyRepository, TicketReplyRepository>();
-            builder.Services.AddScoped<ICommunityPostRepository, CommunityPostRepository>();
             builder.Services.AddScoped<IFaqRepository, FaqRepository>();
             builder.Services.AddScoped<IUserDeviceRepository, UserDeviceRepository>();
             builder.Services.AddScoped<INotificationPreferenceRepository, NotificationPreferenceRepository>();
@@ -133,7 +132,6 @@ namespace LMS.API
             builder.Services.AddScoped<IAttendanceService, AttendanceService>();
             builder.Services.AddScoped<IAttendanceSummaryService, AttendanceSummaryService>();
             builder.Services.AddScoped<ITicketService, TicketService>();
-            builder.Services.AddScoped<ICommunityService, CommunityService>();
             builder.Services.AddScoped<IFaqService, FaqService>();
             builder.Services.AddScoped<IUserDeviceService, UserDeviceService>();
             builder.Services.AddScoped<IProfileAndSecurityService, ProfileAndSecurityService>();
@@ -149,6 +147,11 @@ namespace LMS.API
             builder.Services.AddScoped<ICourseService, CourseService>();
             builder.Services.AddScoped<IDashboardService, DashboardService>();
             builder.Services.AddScoped<IAdminService, AdminService>();
+            builder.Services.AddScoped<IAssignmentService, AssignmentService>();
+            builder.Services.AddScoped<ISecurityService, SecurityService>();
+            builder.Services.AddScoped<IAccountDetailsService, AccountDetailsService>();
+            builder.Services.AddScoped<ISupportAppService, SupportAppService>();
+            builder.Services.AddScoped<IFaqAppService, FaqAppService>();
 
             builder.Services.AddCors(options =>
             {
@@ -177,7 +180,8 @@ namespace LMS.API
 
             app.UseCors("AllowAllOrigins");
 
-            app.UseHttpsRedirection();
+            if (!app.Environment.IsEnvironment("Testing"))
+                app.UseHttpsRedirection();
 
             app.UseStaticFiles();
             app.UseCors("AllowAll");

@@ -15,4 +15,6 @@ public interface IGraduationProjectService
     Task<GraduationProjectResponseDto?> UpdateStatusAsync(int id, string status);
 
     Task<bool> DeleteAsync(int id);
+
+    Task<ProjectUploadMetadataDto> GetUploadMetadataAsync();
 }

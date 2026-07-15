@@ -7,6 +7,7 @@ namespace LMS.API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
+[Authorize]
 public class LiveSessionsController : ControllerBase
 {
     private readonly ILiveSessionService _service;

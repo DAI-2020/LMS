@@ -32,7 +32,7 @@ public class AuthController : ControllerBase
         {
             var result = await _authService.LoginAsync(dto);
             if (!result.IsSuccess)
-                return Unauthorized(new { message = "Invalid email or password", debug = result.ErrorDetail });
+                return Unauthorized(new { message = "Invalid email or password" });
 
             return Ok(result.Response);
         }
@@ -79,7 +79,9 @@ public class AuthController : ControllerBase
     [HttpPost("change-password")]
     public async Task<IActionResult> ChangePassword([FromBody] ChangePasswordDto dto)
     {
-        var userId = int.Parse(User.FindFirstValue("UserId")!);
+        var claim = User.FindFirstValue("UserId");
+        if (claim == null || !int.TryParse(claim, out var userId))
+            throw new UnauthorizedAccessException("User ID claim not found.");
         var result = await _profileService.ChangePasswordAsync(userId, dto.OldPassword, dto.NewPassword);
         if (!result) return BadRequest(new { message = "Old password is incorrect" });
         return Ok(new { message = "Password changed successfully" });
@@ -133,7 +135,7 @@ public class AuthController : ControllerBase
         return Ok(roles);
     }
 
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     [HttpGet("debug-token")]
     public IActionResult DebugToken()
     {

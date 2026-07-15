@@ -2,7 +2,8 @@
 {
     public enum LiveSessionType
     {
-        Technical,
-        NonTechnical
+        Lecture,
+        Workshop,
+        Exam
     }
 }

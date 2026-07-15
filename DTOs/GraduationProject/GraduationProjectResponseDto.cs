@@ -8,13 +8,13 @@ public class GraduationProjectResponseDto
 
     public int StudentId { get; set; }
 
-    public string ProjectName { get; set; }
+    public string ProjectName { get; set; } = string.Empty;
 
-    public string LeadProject { get; set; }
+    public string LeadProject { get; set; } = string.Empty;
 
-    public string DescriptionProject { get; set; }
+    public string DescriptionProject { get; set; } = string.Empty;
 
-    public string UploadDocumentProject { get; set; }
+    public string UploadDocumentProject { get; set; } = string.Empty;
 
     public GraduationProjectStatus ProjectStatus { get; set; }
 

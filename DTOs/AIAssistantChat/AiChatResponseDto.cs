@@ -8,9 +8,9 @@ public class AiChatResponseDto
 
     public int CourseId { get; set; }
 
-    public string UserQuery { get; set; }
+    public string UserQuery { get; set; } = string.Empty;
 
-    public string AIResponse { get; set; }
+    public string AIResponse { get; set; } = string.Empty;
 
     public DateTime AskedAt { get; set; }
 }

@@ -18,6 +18,14 @@ public class GraduationProjectController : ControllerBase
     }
 
     [Authorize(Roles = "Student")]
+    [HttpGet("upload-metadata")]
+    public async Task<IActionResult> GetUploadMetadata()
+    {
+        var result = await _service.GetUploadMetadataAsync();
+        return Ok(result);
+    }
+
+    [Authorize(Roles = "Student")]
     [HttpPost("submit")]
     public async Task<IActionResult> SubmitProject([FromForm] SubmitGraduationProjectDto dto)
     {
@@ -87,5 +95,11 @@ public class GraduationProjectController : ControllerBase
         return NoContent();
     }
 
-    private int GetUserId() => int.Parse(User.FindFirstValue("UserId")!);
+    private int GetUserId()
+    {
+        var claim = User.FindFirstValue("UserId");
+        if (claim == null || !int.TryParse(claim, out var id))
+            throw new UnauthorizedAccessException("User ID claim not found.");
+        return id;
+    }
 }

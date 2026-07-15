@@ -2,11 +2,9 @@
 {
     public enum LiveSessionStatus
     {
-        Upcoming,
+        Scheduled,
         Live,
         Completed,
-        Cancelled,
-        TodaySession,
-        Pending
+        Cancelled
     }
 }

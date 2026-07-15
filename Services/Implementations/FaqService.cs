@@ -27,7 +27,7 @@ namespace LMS.API.Services.Implementations
             });
         }
 
-        public async Task<FaqDto> GetFaqByIdAsync(int id)
+        public async Task<FaqDto?> GetFaqByIdAsync(int id)
         {
             var faq = await _faqRepository.GetByIdAsync(id);
             if (faq == null) return null;

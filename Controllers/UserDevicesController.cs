@@ -43,7 +43,13 @@ public class UserDevicesController : ControllerBase
         return NoContent();
     }
 
-    private int GetUserId() => int.Parse(User.FindFirstValue("UserId")!);
+    private int GetUserId()
+    {
+        var claim = User.FindFirstValue("UserId");
+        if (claim == null || !int.TryParse(claim, out var id))
+            throw new UnauthorizedAccessException("User ID claim not found.");
+        return id;
+    }
 
     private string GetTokenHash() =>
         User.FindFirstValue(System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Jti) ?? string.Empty;

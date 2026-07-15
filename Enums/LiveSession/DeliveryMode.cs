@@ -3,6 +3,7 @@
     public enum DeliveryMode
     {
         Online,
-        Onsite
+        InPerson,
+        Hybrid
     }
 }

@@ -100,5 +100,11 @@ public class QuizzesController : ControllerBase
         return NoContent();
     }
 
-    private int GetUserId() => int.Parse(User.FindFirstValue("UserId")!);
+    private int GetUserId()
+    {
+        var claim = User.FindFirstValue("UserId");
+        if (claim == null || !int.TryParse(claim, out var id))
+            throw new UnauthorizedAccessException("User ID claim not found.");
+        return id;
+    }
 }

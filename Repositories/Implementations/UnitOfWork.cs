@@ -21,7 +21,6 @@ public class UnitOfWork : IUnitOfWork
     public IAttendanceRepository Attendance { get; }
     public ITicketRepository Tickets { get; }
     public ITicketReplyRepository TicketReplies { get; }
-    public ICommunityPostRepository CommunityPosts { get; }
     public IFaqRepository Faqs { get; }
     public IUserDeviceRepository UserDevices { get; }
     public INotificationPreferenceRepository NotificationPreferences { get; }
@@ -42,7 +41,6 @@ public class UnitOfWork : IUnitOfWork
         IAttendanceRepository attendance,
         ITicketRepository tickets,
         ITicketReplyRepository ticketReplies,
-        ICommunityPostRepository communityPosts,
         IFaqRepository faqs,
         IUserDeviceRepository userDevices,
         INotificationPreferenceRepository notificationPreferences)
@@ -62,7 +60,6 @@ public class UnitOfWork : IUnitOfWork
         Attendance = attendance;
         Tickets = tickets;
         TicketReplies = ticketReplies;
-        CommunityPosts = communityPosts;
         Faqs = faqs;
         UserDevices = userDevices;
         NotificationPreferences = notificationPreferences;

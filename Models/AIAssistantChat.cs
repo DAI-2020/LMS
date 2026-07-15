@@ -8,13 +8,13 @@ public class AIAssistantChat
 
     public int CourseId { get; set; }
 
-    public string UserQuery { get; set; }
+    public string UserQuery { get; set; } = string.Empty;
 
-    public string AIResponse { get; set; }
+    public string AIResponse { get; set; } = string.Empty;
 
     public DateTime AskedAt { get; set; }
 
-    public User Student { get; set; }
+    public User Student { get; set; } = null!;
 
-    public Course Course { get; set; }
+    public Course Course { get; set; } = null!;
 }
