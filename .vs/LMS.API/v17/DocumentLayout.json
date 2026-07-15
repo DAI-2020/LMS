@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\dtos\\aiassistantchat\\summarizelessondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:dtos\\aiassistantchat\\summarizelessondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\dtos\\aiassistantchat\\studyplandto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:dtos\\aiassistantchat\\studyplandto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\dtos\\aiassistantchat\\helpmewritingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:dtos\\aiassistantchat\\helpmewritingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\controllers\\aiassistantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|solutionrelative:controllers\\aiassistantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FA67B98F-F367-4B75-812F-DDA5C500721C}|LMS.API.csproj|c:\\users\\nasrat\\onedrive\\desktop\\college\\lms\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -18,11 +30,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SummarizeLessonDto.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\AIAssistantChat\\SummarizeLessonDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\AIAssistantChat\\SummarizeLessonDto.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\AIAssistantChat\\SummarizeLessonDto.cs",
+              "RelativeToolTip": "DTOs\\AIAssistantChat\\SummarizeLessonDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-15T11:35:51.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "StudyPlanDto.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\AIAssistantChat\\StudyPlanDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\AIAssistantChat\\StudyPlanDto.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\AIAssistantChat\\StudyPlanDto.cs",
+              "RelativeToolTip": "DTOs\\AIAssistantChat\\StudyPlanDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-15T11:35:15.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HelpMeWritingDto.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\AIAssistantChat\\HelpMeWritingDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\AIAssistantChat\\HelpMeWritingDto.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\DTOs\\AIAssistantChat\\HelpMeWritingDto.cs",
+              "RelativeToolTip": "DTOs\\AIAssistantChat\\HelpMeWritingDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-15T11:34:12.96Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AiAssistantController.cs",
+              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Controllers\\AiAssistantController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AiAssistantController.cs",
+              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Controllers\\AiAssistantController.cs",
+              "RelativeToolTip": "Controllers\\AiAssistantController.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAgwDAAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-15T11:32:27.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -31,19 +95,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-07-14T15:34:07.255Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\nasrat\\OneDrive\\Desktop\\College\\LMS\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAIsAAAAAAAAAAAAqwJ8AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-14T08:42:21.859Z",
               "EditorCaption": ""
             }
           ]
